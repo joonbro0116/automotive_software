@@ -1,4 +1,0 @@
-[01m[K/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:[m[K In member function ‘[01m[Kvoid lane_processor::LaneProcessor::ClassifyAndStoreLanesByY(const std::vector<interface::Point2D>&, const interface::VehicleState&)[m[K’:
-[01m[K/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:138:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvehicle_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-  138 |     [01;35m[Kconst interface::VehicleState& vehicle_state[m[K) {
-      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K

@@ -1,1 +1,0 @@
-/home/joon/automotive_software_final/build/ad_msgs/rosidl_generator_cpp/ad_msgs/msg/detail/polyfit_lane_data__traits.hpp

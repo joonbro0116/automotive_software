@@ -1,1 +1,0 @@
-/home/joon/automotive_software_final/build/autonomous_driving/ament_cmake_core/autonomous_drivingConfig-version.cmake

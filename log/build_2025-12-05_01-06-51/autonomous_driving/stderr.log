@@ -1,8 +1,0 @@
-/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function ‘std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane1PointsMemoryVehicleFrame(const interface::VehicleState&) const’:
-/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:415:36: warning: unused parameter ‘vehicle_state’ [-Wunused-parameter]
-  415 |     const interface::VehicleState& vehicle_state) const {
-      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
-/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function ‘std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane4PointsMemoryVehicleFrame(const interface::VehicleState&) const’:
-/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:467:36: warning: unused parameter ‘vehicle_state’ [-Wunused-parameter]
-  467 |     const interface::VehicleState& vehicle_state) const {
-      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~

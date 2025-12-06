@@ -1,1 +1,0 @@
-/home/joon/automotive_software_final/build/ad_msgs/rosidl_typesupport_introspection_cpp/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_introspection_cpp.hpp

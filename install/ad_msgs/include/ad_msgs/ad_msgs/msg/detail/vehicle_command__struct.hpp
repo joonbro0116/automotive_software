@@ -1,1 +1,0 @@
-/home/joon/automotive_software_final/build/ad_msgs/rosidl_generator_cpp/ad_msgs/msg/detail/vehicle_command__struct.hpp

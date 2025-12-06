@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/joon/automotive_software_final/build/autonomous_driving/autonomous_driving" "TARGETS" "autonomous_driving" "DESTINATION" "lib/autonomous_driving")

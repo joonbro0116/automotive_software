@@ -1,1 +1,0 @@
-/home/joon/automotive_software_final/build/ad_msgs/rosidl_generator_c/ad_msgs/msg/lane_point_data.h

@@ -1,4 +1,0 @@
-[01m[K/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:[m[K In member function ‘[01m[Kvoid lane_processor::LaneProcessor::GenerateLane1And4ByExtrapolation()[m[K’:
-[01m[K/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:688:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KLANE_WIDTH[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
-  688 |     static constexpr double [01;35m[KLANE_WIDTH[m[K = 3.7;  // lane 간격
-      |                             [01;35m[K^~~~~~~~~~[m[K
