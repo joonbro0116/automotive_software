@@ -1,0 +1,29 @@
+[0.108s] Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[0.276s] [ 28%] Built target display
+[0.280s] [ 71%] Built target lane_detection
+[0.282s] [100%] Built target vehicle
+[0.317s] Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[0.326s] Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator
+[0.334s] -- Install configuration: ""
+[0.342s] -- Execute custom install script
+[0.343s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/lib/simulator/vehicle
+[0.346s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/lib/simulator/lane_detection
+[0.346s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/lib/simulator/display
+[0.346s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/launch/simulation.launch.xml
+[0.347s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/launch/simulation.launch.xml:Zone.Identifier
+[0.347s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/package_run_dependencies/simulator
+[0.347s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/parent_prefix_path/simulator
+[0.347s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/ament_prefix_path.sh
+[0.347s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/ament_prefix_path.dsv
+[0.349s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/path.sh
+[0.349s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/path.dsv
+[0.350s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.bash
+[0.350s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.sh
+[0.350s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.zsh
+[0.351s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.dsv
+[0.352s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/package.dsv
+[0.359s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/packages/simulator
+[0.360s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/cmake/simulatorConfig.cmake
+[0.361s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/cmake/simulatorConfig-version.cmake
+[0.361s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/simulator/share/simulator/package.xml
+[0.397s] Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator

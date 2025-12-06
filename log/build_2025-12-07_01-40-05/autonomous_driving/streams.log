@@ -1,0 +1,55 @@
+[0.088s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/automotive_software_final/src/app/autonomous_driving -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/autonomous_driving
+[0.122s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.227s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.245s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.414s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.418s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.427s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.441s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.458s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.498s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.501s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.172s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.250s] -- Found ad_msgs: 0.0.0 (/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/cmake)
+[5.380s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[5.388s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[5.550s] -- Configuring done
+[5.568s] -- Generating done
+[5.573s] -- Build files have been written to: /home/joon/automotive_software_final/build/autonomous_driving
+[5.583s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/automotive_software_final/src/app/autonomous_driving -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/autonomous_driving
+[5.585s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[5.625s] Consolidate compiler generated dependencies of target autonomous_driving
+[5.639s] [ 33%] Building CXX object CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.o
+[5.642s] [ 66%] Building CXX object CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o
+[6.890s] /home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function ‘void lane_processor::LaneProcessor::ClassifyAndStoreLanesByY(const std::vector<interface::Point2D>&, const interface::VehicleState&)’:
+[6.890s] /home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:137:36: warning: unused parameter ‘vehicle_state’ [-Wunused-parameter]
+[6.890s]   137 |     const interface::VehicleState& vehicle_state) {
+[6.890s]       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+[26.005s] [100%] Linking CXX executable autonomous_driving
+[26.393s] [100%] Built target autonomous_driving
+[26.402s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[26.411s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving
+[26.419s] -- Install configuration: "Release"
+[26.420s] -- Execute custom install script
+[26.420s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/autonomous_driving
+[26.421s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml
+[26.421s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier
+[26.421s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml
+[26.421s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier
+[26.421s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/simultaneous_inputs.py
+[26.422s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/package_run_dependencies/autonomous_driving
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/parent_prefix_path/autonomous_driving
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.sh
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.dsv
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.sh
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.dsv
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.bash
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.sh
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.zsh
+[26.424s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.dsv
+[26.424s] -- Symlinking: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.dsv
+[26.433s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/packages/autonomous_driving
+[26.433s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig.cmake
+[26.433s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig-version.cmake
+[26.433s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.xml
+[26.434s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving

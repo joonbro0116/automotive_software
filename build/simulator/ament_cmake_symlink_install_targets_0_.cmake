@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/joon/automotive_software_final/build/simulator/vehicle" "/home/joon/automotive_software_final/build/simulator/lane_detection" "/home/joon/automotive_software_final/build/simulator/display" "TARGETS" "vehicle" "lane_detection" "display" "DESTINATION" "lib/simulator")

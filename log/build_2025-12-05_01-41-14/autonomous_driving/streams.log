@@ -1,0 +1,31 @@
+[0.052s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target autonomous_driving[0m
+[0.107s] [ 33%] [32mBuilding CXX object CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o[0m
+[3.543s] [ 66%] [32m[1mLinking CXX executable autonomous_driving[0m
+[4.573s] [100%] Built target autonomous_driving
+[4.587s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[4.589s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving
+[4.594s] -- Install configuration: ""
+[4.594s] -- Execute custom install script
+[4.594s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/autonomous_driving
+[4.594s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml
+[4.594s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier
+[4.595s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml
+[4.595s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier
+[4.595s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/simultaneous_inputs.py
+[4.595s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/package_run_dependencies/autonomous_driving
+[4.595s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/parent_prefix_path/autonomous_driving
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.sh
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.dsv
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.sh
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.dsv
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.bash
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.sh
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.zsh
+[4.596s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.dsv
+[4.597s] -- Symlinking: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.dsv
+[4.604s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/packages/autonomous_driving
+[4.605s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig.cmake
+[4.605s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig-version.cmake
+[4.605s] -- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.xml
+[4.607s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving

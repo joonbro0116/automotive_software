@@ -1,0 +1,77 @@
+[0.062s] Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake /home/joon/automotive_software_final/src/app/simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/simulator
+[0.163s] -- The C compiler identification is GNU 11.4.0
+[0.483s] -- The CXX compiler identification is GNU 11.4.0
+[0.742s] -- Detecting C compiler ABI info
+[0.891s] -- Detecting C compiler ABI info - done
+[0.896s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.897s] -- Detecting C compile features
+[0.897s] -- Detecting C compile features - done
+[0.900s] -- Detecting CXX compiler ABI info
+[1.049s] -- Detecting CXX compiler ABI info - done
+[1.055s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.056s] -- Detecting CXX compile features
+[1.056s] -- Detecting CXX compile features - done
+[1.059s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.230s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.292s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.315s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[1.467s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.470s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.477s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.486s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.497s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.529s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.531s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.145s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.721s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.772s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.783s] -- Looking for pthread.h
+[3.915s] -- Looking for pthread.h - found
+[3.915s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.022s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.023s] -- Found Threads: TRUE  
+[4.078s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[4.126s] -- Found ad_msgs: 0.0.0 (/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/cmake)
+[4.156s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[4.164s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[4.285s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem 
+[4.352s] -- Configuring done
+[4.376s] -- Generating done
+[4.387s] -- Build files have been written to: /home/joon/automotive_software_final/build/simulator
+[4.400s] Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake /home/joon/automotive_software_final/src/app/simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/simulator
+[4.403s] Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[4.453s] [ 14%] [32mBuilding CXX object CMakeFiles/vehicle.dir/src/vehicle/vehicle_simulator_node.cpp.o[0m
+[4.454s] [ 28%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/src/lane_detection/lane_detection_node.cpp.o[0m
+[4.454s] [ 57%] [32mBuilding CXX object CMakeFiles/display.dir/src/display/display_node.cpp.o[0m
+[4.454s] [ 57%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/home/joon/automotive_software_final/src/bsw/system/interface/interface_lane.cpp.o[0m
+[19.541s] [ 71%] [32m[1mLinking CXX executable lane_detection[0m
+[20.562s] [ 71%] Built target lane_detection
+[22.579s] [ 85%] [32m[1mLinking CXX executable vehicle[0m
+[23.446s] [ 85%] Built target vehicle
+[33.402s] [100%] [32m[1mLinking CXX executable display[0m
+[34.769s] [100%] Built target display
+[34.786s] Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[34.788s] Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator
+[34.794s] -- Install configuration: ""
+[34.794s] -- Execute custom install script
+[34.795s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/lib/simulator/vehicle
+[34.802s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/lib/simulator/lane_detection
+[34.809s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/lib/simulator/display
+[34.817s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/launch/simulation.launch.xml
+[34.825s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/launch/simulation.launch.xml:Zone.Identifier
+[34.833s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/package_run_dependencies/simulator
+[34.840s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/parent_prefix_path/simulator
+[34.848s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/ament_prefix_path.sh
+[34.857s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/ament_prefix_path.dsv
+[34.864s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/path.sh
+[34.872s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/environment/path.dsv
+[34.879s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.bash
+[34.886s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.sh
+[34.894s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.zsh
+[34.902s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/local_setup.dsv
+[34.909s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/package.dsv
+[34.916s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/ament_index/resource_index/packages/simulator
+[34.925s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/cmake/simulatorConfig.cmake
+[34.936s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/cmake/simulatorConfig-version.cmake
+[34.943s] -- Symlinking: /home/joon/automotive_software_final/install/simulator/share/simulator/package.xml
+[34.954s] Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator

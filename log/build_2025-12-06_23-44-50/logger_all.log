@@ -1,0 +1,589 @@
+[0.686s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.687s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x754f3001aec0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x754f30123370>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x754f30123370>>, mixin_verb=('build',))
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.132s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/joon/automotive_software_final'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.168s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['ignore', 'ignore_ament_install']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'ignore'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'ignore_ament_install'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['colcon_pkg']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'colcon_pkg'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['colcon_meta']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'colcon_meta'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['ros']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'ros'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['cmake', 'python']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'cmake'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'python'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extensions ['python_setup_py']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(resources) by extension 'python_setup_py'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['ignore', 'ignore_ament_install']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'ignore'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'ignore_ament_install'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['colcon_pkg']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'colcon_pkg'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['colcon_meta']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'colcon_meta'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['ros']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'ros'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['cmake', 'python']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'cmake'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'python'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extensions ['python_setup_py']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv) by extension 'python_setup_py'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['ignore', 'ignore_ament_install']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'ignore'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'ignore_ament_install'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['colcon_pkg']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'colcon_pkg'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['colcon_meta']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'colcon_meta'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['ros']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'ros'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['cmake', 'python']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'cmake'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'python'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extensions ['python_setup_py']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/evaluation_lane) by extension 'python_setup_py'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['ignore', 'ignore_ament_install']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'ignore'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'ignore_ament_install'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['colcon_pkg']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'colcon_pkg'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['colcon_meta']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'colcon_meta'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['ros']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'ros'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['cmake', 'python']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'cmake'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'python'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extensions ['python_setup_py']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/csv/simulation_lane) by extension 'python_setup_py'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['ignore', 'ignore_ament_install']
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'ignore'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'ignore_ament_install'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['colcon_pkg']
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'colcon_pkg'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['colcon_meta']
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'colcon_meta'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['ros']
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'ros'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['cmake', 'python']
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'cmake'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'python'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extensions ['python_setup_py']
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/meshes) by extension 'python_setup_py'
+[1.173s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['ignore', 'ignore_ament_install']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'ignore'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'ignore_ament_install'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['colcon_pkg']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'colcon_pkg'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['colcon_meta']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'colcon_meta'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['ros']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'ros'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['cmake', 'python']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'cmake'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'python'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extensions ['python_setup_py']
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(resources/rviz) by extension 'python_setup_py'
+[1.174s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['ignore', 'ignore_ament_install']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'ignore'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'ignore_ament_install'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['colcon_pkg']
+[1.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'colcon_pkg'
+[1.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['colcon_meta']
+[1.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'colcon_meta'
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['ros']
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'ros'
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['cmake', 'python']
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'cmake'
+[1.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'python'
+[1.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extensions ['python_setup_py']
+[1.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/app) by extension 'python_setup_py'
+[1.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extensions ['ignore', 'ignore_ament_install']
+[1.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extension 'ignore'
+[1.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extension 'ignore_ament_install'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extensions ['colcon_pkg']
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extension 'colcon_pkg'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extensions ['colcon_meta']
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extension 'colcon_meta'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extensions ['ros']
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/autonomous_driving) by extension 'ros'
+[1.188s] DEBUG:colcon.colcon_core.package_identification:Package 'src/app/autonomous_driving' with type 'ros.ament_cmake' and name 'autonomous_driving'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extensions ['ignore', 'ignore_ament_install']
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extension 'ignore'
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extension 'ignore_ament_install'
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extensions ['colcon_pkg']
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extension 'colcon_pkg'
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extensions ['colcon_meta']
+[1.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extension 'colcon_meta'
+[1.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extensions ['ros']
+[1.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/evaluation) by extension 'ros'
+[1.193s] DEBUG:colcon.colcon_core.package_identification:Package 'src/app/evaluation' with type 'ros.ament_cmake' and name 'evaluation'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extensions ['ignore', 'ignore_ament_install']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extension 'ignore'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extension 'ignore_ament_install'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extensions ['colcon_pkg']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extension 'colcon_pkg'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extensions ['colcon_meta']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extension 'colcon_meta'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extensions ['ros']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/mission_manager) by extension 'ros'
+[1.198s] DEBUG:colcon.colcon_core.package_identification:Package 'src/app/mission_manager' with type 'ros.ament_cmake' and name 'mission_manager'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extensions ['ignore', 'ignore_ament_install']
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extension 'ignore'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extension 'ignore_ament_install'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extensions ['colcon_pkg']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extension 'colcon_pkg'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extensions ['colcon_meta']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extension 'colcon_meta'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extensions ['ros']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/app/simulator) by extension 'ros'
+[1.201s] DEBUG:colcon.colcon_core.package_identification:Package 'src/app/simulator' with type 'ros.ament_cmake' and name 'simulator'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['ignore', 'ignore_ament_install']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'ignore'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'ignore_ament_install'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['colcon_pkg']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'colcon_pkg'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['colcon_meta']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'colcon_meta'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['ros']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'ros'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['cmake', 'python']
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'cmake'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'python'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extensions ['python_setup_py']
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw) by extension 'python_setup_py'
+[1.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['ignore', 'ignore_ament_install']
+[1.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'ignore'
+[1.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'ignore_ament_install'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['colcon_pkg']
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'colcon_pkg'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['colcon_meta']
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'colcon_meta'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['ros']
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'ros'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['cmake', 'python']
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'cmake'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'python'
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extensions ['python_setup_py']
+[1.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system) by extension 'python_setup_py'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['ignore', 'ignore_ament_install']
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'ignore'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'ignore_ament_install'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['colcon_pkg']
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'colcon_pkg'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['colcon_meta']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'colcon_meta'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['ros']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'ros'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['cmake', 'python']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'cmake'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'python'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extensions ['python_setup_py']
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/bridge) by extension 'python_setup_py'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['ignore', 'ignore_ament_install']
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'ignore'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'ignore_ament_install'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['colcon_pkg']
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'colcon_pkg'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['colcon_meta']
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'colcon_meta'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['ros']
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'ros'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['cmake', 'python']
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'cmake'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'python'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extensions ['python_setup_py']
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/bsw/system/interface) by extension 'python_setup_py'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['ignore', 'ignore_ament_install']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'ignore'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'ignore_ament_install'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['colcon_pkg']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'colcon_pkg'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['colcon_meta']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'colcon_meta'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['ros']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'ros'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['cmake', 'python']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'cmake'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'python'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extensions ['python_setup_py']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte) by extension 'python_setup_py'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['ignore', 'ignore_ament_install']
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'ignore'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'ignore_ament_install'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['colcon_pkg']
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'colcon_pkg'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['colcon_meta']
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'colcon_meta'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['ros']
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'ros'
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['cmake', 'python']
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'cmake'
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'python'
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extensions ['python_setup_py']
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg) by extension 'python_setup_py'
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extension 'ignore'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extension 'ignore_ament_install'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extensions ['colcon_pkg']
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extension 'colcon_pkg'
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extensions ['colcon_meta']
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extension 'colcon_meta'
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extensions ['ros']
+[1.217s] Level 1:colcon.colcon_core.package_identification:_identify(src/rte/msg/ad_msgs) by extension 'ros'
+[1.220s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rte/msg/ad_msgs' with type 'ros.ament_cmake' and name 'ad_msgs'
+[1.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.368s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/joon/automotive_software_final/install
+[1.370s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 445 installed packages in /opt/ros/humble
+[1.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_args' from command line to 'None'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_target' from command line to 'None'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.472s] Level 5:colcon.colcon_core.verb:set package 'ad_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.472s] DEBUG:colcon.colcon_core.verb:Building package 'ad_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joon/automotive_software_final/build/ad_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joon/automotive_software_final/install/ad_msgs', 'merge_install': False, 'path': '/home/joon/automotive_software_final/src/rte/msg/ad_msgs', 'symlink_install': True, 'test_result_base': None}
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_args' from command line to 'None'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_target' from command line to 'None'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_clean_cache' from command line to 'False'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_clean_first' from command line to 'False'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'cmake_force_configure' from command line to 'False'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'ament_cmake_args' from command line to 'None'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'catkin_cmake_args' from command line to 'None'
+[1.473s] Level 5:colcon.colcon_core.verb:set package 'autonomous_driving' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.473s] DEBUG:colcon.colcon_core.verb:Building package 'autonomous_driving' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joon/automotive_software_final/build/autonomous_driving', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joon/automotive_software_final/install/autonomous_driving', 'merge_install': False, 'path': '/home/joon/automotive_software_final/src/app/autonomous_driving', 'symlink_install': True, 'test_result_base': None}
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_target' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_clean_cache' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_clean_first' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'cmake_force_configure' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'ament_cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'catkin_cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'evaluation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.474s] DEBUG:colcon.colcon_core.verb:Building package 'evaluation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joon/automotive_software_final/build/evaluation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joon/automotive_software_final/install/evaluation', 'merge_install': False, 'path': '/home/joon/automotive_software_final/src/app/evaluation', 'symlink_install': True, 'test_result_base': None}
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_args' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_target' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_clean_first' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_force_configure' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'ament_cmake_args' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.475s] DEBUG:colcon.colcon_core.verb:Building package 'mission_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joon/automotive_software_final/build/mission_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joon/automotive_software_final/install/mission_manager', 'merge_install': False, 'path': '/home/joon/automotive_software_final/src/app/mission_manager', 'symlink_install': True, 'test_result_base': None}
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_args' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_target' from command line to 'None'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[1.475s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_clean_first' from command line to 'False'
+[1.476s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'cmake_force_configure' from command line to 'False'
+[1.476s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'ament_cmake_args' from command line to 'None'
+[1.476s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[1.476s] Level 5:colcon.colcon_core.verb:set package 'simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.476s] DEBUG:colcon.colcon_core.verb:Building package 'simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joon/automotive_software_final/build/simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joon/automotive_software_final/install/simulator', 'merge_install': False, 'path': '/home/joon/automotive_software_final/src/app/simulator', 'symlink_install': True, 'test_result_base': None}
+[1.476s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.478s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.479s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joon/automotive_software_final/src/rte/msg/ad_msgs' with build type 'ament_cmake'
+[1.480s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joon/automotive_software_final/src/rte/msg/ad_msgs'
+[1.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.494s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.494s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.522s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/ad_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/ad_msgs -- -j16 -l16
+[2.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/ad_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/ad_msgs -- -j16 -l16
+[2.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/ad_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/ad_msgs
+[2.386s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ad_msgs)
+[2.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/ad_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/ad_msgs
+[2.399s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs' for CMake module files
+[2.400s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs' for CMake config files
+[2.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('ad_msgs', 'cmake_prefix_path')
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.ps1'
+[2.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.dsv'
+[2.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.sh'
+[2.406s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib'
+[2.406s] Level 1:colcon.colcon_core.shell:create_environment_hook('ad_msgs', 'ld_library_path_lib')
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.ps1'
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.dsv'
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.sh'
+[2.408s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/bin'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib/pkgconfig/ad_msgs.pc'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib/python3.10/site-packages'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/bin'
+[2.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.ps1'
+[2.411s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.dsv'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.sh'
+[2.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.bash'
+[2.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.zsh'
+[2.416s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/ad_msgs/share/colcon-core/packages/ad_msgs)
+[2.417s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ad_msgs)
+[2.418s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs' for CMake module files
+[2.418s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs' for CMake config files
+[2.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('ad_msgs', 'cmake_prefix_path')
+[2.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.ps1'
+[2.421s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.dsv'
+[2.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/cmake_prefix_path.sh'
+[2.422s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib'
+[2.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('ad_msgs', 'ld_library_path_lib')
+[2.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.ps1'
+[2.423s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.dsv'
+[2.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/hook/ld_library_path_lib.sh'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/bin'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib/pkgconfig/ad_msgs.pc'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/lib/python3.10/site-packages'
+[2.425s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/ad_msgs/bin'
+[2.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.ps1'
+[2.426s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.dsv'
+[2.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.sh'
+[2.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.bash'
+[2.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/package.zsh'
+[2.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/ad_msgs/share/colcon-core/packages/ad_msgs)
+[2.430s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joon/automotive_software_final/src/app/autonomous_driving' with build type 'ament_cmake'
+[2.430s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joon/automotive_software_final/src/app/autonomous_driving'
+[2.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.431s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.437s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joon/automotive_software_final/src/app/evaluation' with build type 'ament_cmake'
+[2.438s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joon/automotive_software_final/src/app/evaluation'
+[2.438s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.439s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joon/automotive_software_final/src/app/mission_manager' with build type 'ament_cmake'
+[2.450s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joon/automotive_software_final/src/app/mission_manager'
+[2.451s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.451s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.458s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joon/automotive_software_final/src/app/simulator' with build type 'ament_cmake'
+[2.459s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joon/automotive_software_final/src/app/simulator'
+[2.459s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.459s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.530s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[2.536s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/evaluation': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/evaluation -- -j16 -l16
+[2.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/mission_manager': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/mission_manager -- -j16 -l16
+[2.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[2.759s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/evaluation' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/evaluation -- -j16 -l16
+[2.768s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/evaluation': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/evaluation
+[2.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/mission_manager' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/mission_manager -- -j16 -l16
+[2.772s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/mission_manager': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/mission_manager
+[2.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/simulator -- -j16 -l16
+[2.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/simulator': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator
+[2.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(evaluation)
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation' for CMake module files
+[2.807s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/evaluation' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/evaluation
+[2.808s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation' for CMake config files
+[2.812s] Level 1:colcon.colcon_core.shell:create_environment_hook('evaluation', 'cmake_prefix_path')
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.ps1'
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.dsv'
+[2.814s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.sh'
+[2.815s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib'
+[2.815s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/bin'
+[2.815s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib/pkgconfig/evaluation.pc'
+[2.816s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib/python3.10/site-packages'
+[2.816s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/bin'
+[2.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.ps1'
+[2.818s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.dsv'
+[2.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.sh'
+[2.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.bash'
+[2.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.zsh'
+[2.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/evaluation/share/colcon-core/packages/evaluation)
+[2.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(evaluation)
+[2.824s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation' for CMake module files
+[2.824s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation' for CMake config files
+[2.825s] Level 1:colcon.colcon_core.shell:create_environment_hook('evaluation', 'cmake_prefix_path')
+[2.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.ps1'
+[2.827s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.dsv'
+[2.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/evaluation/share/evaluation/hook/cmake_prefix_path.sh'
+[2.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib'
+[2.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/bin'
+[2.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib/pkgconfig/evaluation.pc'
+[2.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/lib/python3.10/site-packages'
+[2.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/evaluation/bin'
+[2.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.ps1'
+[2.830s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.dsv'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.sh'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.bash'
+[2.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/evaluation/share/evaluation/package.zsh'
+[2.833s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/evaluation/share/colcon-core/packages/evaluation)
+[2.835s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_manager)
+[2.836s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager' for CMake module files
+[2.837s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/mission_manager' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/mission_manager
+[2.838s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager' for CMake config files
+[2.838s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_manager', 'cmake_prefix_path')
+[2.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.ps1'
+[2.839s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.dsv'
+[2.839s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.sh'
+[2.840s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib'
+[2.840s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/bin'
+[2.840s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib/pkgconfig/mission_manager.pc'
+[2.841s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib/python3.10/site-packages'
+[2.841s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/bin'
+[2.841s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.ps1'
+[2.842s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.dsv'
+[2.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.sh'
+[2.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.bash'
+[2.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.zsh'
+[2.845s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/mission_manager/share/colcon-core/packages/mission_manager)
+[2.846s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_manager)
+[2.846s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager' for CMake module files
+[2.846s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager' for CMake config files
+[2.847s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_manager', 'cmake_prefix_path')
+[2.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.ps1'
+[2.848s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.dsv'
+[2.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/hook/cmake_prefix_path.sh'
+[2.849s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib'
+[2.849s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/bin'
+[2.849s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib/pkgconfig/mission_manager.pc'
+[2.849s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/lib/python3.10/site-packages'
+[2.849s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/mission_manager/bin'
+[2.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.ps1'
+[2.851s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.dsv'
+[2.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.sh'
+[2.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.bash'
+[2.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/mission_manager/share/mission_manager/package.zsh'
+[2.853s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/mission_manager/share/colcon-core/packages/mission_manager)
+[2.854s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulator)
+[2.854s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator' for CMake module files
+[2.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/simulator
+[2.856s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator' for CMake config files
+[2.857s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator', 'cmake_prefix_path')
+[2.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.ps1'
+[2.858s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.dsv'
+[2.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.sh'
+[2.859s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib'
+[2.860s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/bin'
+[2.860s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib/pkgconfig/simulator.pc'
+[2.860s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib/python3.10/site-packages'
+[2.860s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/bin'
+[2.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.ps1'
+[2.861s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/simulator/share/simulator/package.dsv'
+[2.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.sh'
+[2.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.bash'
+[2.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.zsh'
+[2.863s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/simulator/share/colcon-core/packages/simulator)
+[2.864s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulator)
+[2.865s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator' for CMake module files
+[2.865s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator' for CMake config files
+[2.865s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator', 'cmake_prefix_path')
+[2.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.ps1'
+[2.866s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.dsv'
+[2.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/simulator/share/simulator/hook/cmake_prefix_path.sh'
+[2.867s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib'
+[2.868s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/bin'
+[2.868s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib/pkgconfig/simulator.pc'
+[2.868s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/lib/python3.10/site-packages'
+[2.868s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/simulator/bin'
+[2.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.ps1'
+[2.869s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/simulator/share/simulator/package.dsv'
+[2.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.sh'
+[2.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.bash'
+[2.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/simulator/share/simulator/package.zsh'
+[2.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/simulator/share/colcon-core/packages/simulator)
+[11.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --build /home/joon/automotive_software_final/build/autonomous_driving -- -j16 -l16
+[11.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving
+[11.817s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_driving)
+[11.817s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving' for CMake module files
+[11.818s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '0': CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/opt/ros/humble /usr/bin/cmake --install /home/joon/automotive_software_final/build/autonomous_driving
+[11.819s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving' for CMake config files
+[11.819s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_driving', 'cmake_prefix_path')
+[11.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.ps1'
+[11.821s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.dsv'
+[11.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.sh'
+[11.823s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib'
+[11.823s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/bin'
+[11.823s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib/pkgconfig/autonomous_driving.pc'
+[11.824s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib/python3.10/site-packages'
+[11.824s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/bin'
+[11.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.ps1'
+[11.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.dsv'
+[11.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.sh'
+[11.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.bash'
+[11.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.zsh'
+[11.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/autonomous_driving/share/colcon-core/packages/autonomous_driving)
+[11.828s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_driving)
+[11.828s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving' for CMake module files
+[11.829s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving' for CMake config files
+[11.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_driving', 'cmake_prefix_path')
+[11.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.ps1'
+[11.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.dsv'
+[11.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/hook/cmake_prefix_path.sh'
+[11.830s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib'
+[11.831s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/bin'
+[11.831s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib/pkgconfig/autonomous_driving.pc'
+[11.831s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/lib/python3.10/site-packages'
+[11.832s] Level 1:colcon.colcon_core.environment:checking '/home/joon/automotive_software_final/install/autonomous_driving/bin'
+[11.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.ps1'
+[11.833s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.dsv'
+[11.833s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.sh'
+[11.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.bash'
+[11.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.zsh'
+[11.834s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joon/automotive_software_final/install/autonomous_driving/share/colcon-core/packages/autonomous_driving)
+[11.835s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.835s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.836s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.836s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.905s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[11.906s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.906s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.906s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.906s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[11.906s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.907s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joon/automotive_software_final/install/local_setup.ps1'
+[11.908s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joon/automotive_software_final/install/_local_setup_util_ps1.py'
+[11.911s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joon/automotive_software_final/install/setup.ps1'
+[11.913s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joon/automotive_software_final/install/local_setup.sh'
+[11.914s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joon/automotive_software_final/install/_local_setup_util_sh.py'
+[11.915s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joon/automotive_software_final/install/setup.sh'
+[11.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joon/automotive_software_final/install/local_setup.bash'
+[11.919s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joon/automotive_software_final/install/setup.bash'
+[11.921s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joon/automotive_software_final/install/local_setup.zsh'
+[11.922s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joon/automotive_software_final/install/setup.zsh'

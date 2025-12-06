@@ -1,0 +1,21 @@
+[0.105s] Invoking command in '/home/joon/automotive_software_final/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake /home/joon/automotive_software_final/src/app/autonomous_driving -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/autonomous_driving
+[0.142s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.370s] Traceback (most recent call last):
+[0.370s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.370s]     from ament_package.templates import get_environment_hook_template_path
+[0.370s] ModuleNotFoundError: No module named 'ament_package'
+[0.387s] CMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.387s]   execute_process(/usr/bin/python3
+[0.387s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.388s]   /home/joon/automotive_software_final/build/autonomous_driving/ament_cmake_package_templates/templates.cmake)
+[0.388s]   returned error code 1
+[0.388s] Call Stack (most recent call first):
+[0.388s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.388s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.388s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.388s]   CMakeLists.txt:21 (find_package)
+[0.388s] 
+[0.388s] 
+[0.389s] -- Configuring incomplete, errors occurred!
+[0.389s] See also "/home/joon/automotive_software_final/build/autonomous_driving/CMakeFiles/CMakeOutput.log".
+[0.393s] Invoked command in '/home/joon/automotive_software_final/build/autonomous_driving' returned '1': AMENT_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/automotive_software_final/install/ad_msgs LD_LIBRARY_PATH=/home/joon/automotive_software_final/install/ad_msgs/lib PYTHONPATH=/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake /home/joon/automotive_software_final/src/app/autonomous_driving -DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/autonomous_driving

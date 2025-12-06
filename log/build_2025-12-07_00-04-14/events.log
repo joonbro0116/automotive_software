@@ -1,0 +1,263 @@
+[0.000000] (-) TimerEvent: {}
+[0.001092] (-) JobUnselected: {'identifier': 'ad_msgs'}
+[0.001163] (-) JobUnselected: {'identifier': 'evaluation'}
+[0.001245] (-) JobUnselected: {'identifier': 'mission_manager'}
+[0.002196] (-) JobUnselected: {'identifier': 'simulator'}
+[0.002538] (autonomous_driving) JobQueued: {'identifier': 'autonomous_driving', 'dependencies': OrderedDict([('ad_msgs', '/home/joon/automotive_software_final/install/ad_msgs')])}
+[0.002596] (autonomous_driving) JobStarted: {'identifier': 'autonomous_driving'}
+[0.099194] (-) TimerEvent: {}
+[0.105214] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'cmake'}
+[0.106760] (autonomous_driving) Command: {'cmd': ['/usr/bin/cmake', '/home/joon/automotive_software_final/src/app/autonomous_driving', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_INSTALL_PREFIX=/home/joon/automotive_software_final/install/autonomous_driving'], 'cwd': '/home/joon/automotive_software_final/build/autonomous_driving', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.58'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/automotive_software_final/install/ad_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cafe1382-8b51-49ca-87dd-990048d7e0ec.sock'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/503_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/automotive_software_final/build/autonomous_driving'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble')]), 'shell': False}
+[0.128672] (autonomous_driving) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199345] (-) TimerEvent: {}
+[0.299603] (-) TimerEvent: {}
+[0.302043] (autonomous_driving) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.340135] (autonomous_driving) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.399895] (-) TimerEvent: {}
+[0.500199] (-) TimerEvent: {}
+[0.600580] (-) TimerEvent: {}
+[0.609079] (autonomous_driving) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.619338] (autonomous_driving) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.640576] (autonomous_driving) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.673617] (autonomous_driving) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700750] (-) TimerEvent: {}
+[0.710924] (autonomous_driving) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.800907] (-) TimerEvent: {}
+[0.814852] (autonomous_driving) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.821167] (autonomous_driving) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.901085] (-) TimerEvent: {}
+[1.001427] (-) TimerEvent: {}
+[1.101771] (-) TimerEvent: {}
+[1.202102] (-) TimerEvent: {}
+[1.302433] (-) TimerEvent: {}
+[1.402792] (-) TimerEvent: {}
+[1.503079] (-) TimerEvent: {}
+[1.603346] (-) TimerEvent: {}
+[1.703630] (-) TimerEvent: {}
+[1.803996] (-) TimerEvent: {}
+[1.904423] (-) TimerEvent: {}
+[2.004713] (-) TimerEvent: {}
+[2.105030] (-) TimerEvent: {}
+[2.205340] (-) TimerEvent: {}
+[2.305644] (-) TimerEvent: {}
+[2.405931] (-) TimerEvent: {}
+[2.506391] (-) TimerEvent: {}
+[2.606800] (-) TimerEvent: {}
+[2.707230] (-) TimerEvent: {}
+[2.807755] (-) TimerEvent: {}
+[2.908331] (-) TimerEvent: {}
+[3.008710] (-) TimerEvent: {}
+[3.109022] (-) TimerEvent: {}
+[3.209428] (-) TimerEvent: {}
+[3.309732] (-) TimerEvent: {}
+[3.410039] (-) TimerEvent: {}
+[3.510351] (-) TimerEvent: {}
+[3.610625] (-) TimerEvent: {}
+[3.710961] (-) TimerEvent: {}
+[3.811365] (-) TimerEvent: {}
+[3.911703] (-) TimerEvent: {}
+[4.012020] (-) TimerEvent: {}
+[4.112328] (-) TimerEvent: {}
+[4.212631] (-) TimerEvent: {}
+[4.312949] (-) TimerEvent: {}
+[4.413270] (-) TimerEvent: {}
+[4.513632] (-) TimerEvent: {}
+[4.613956] (-) TimerEvent: {}
+[4.714330] (-) TimerEvent: {}
+[4.814636] (-) TimerEvent: {}
+[4.914947] (-) TimerEvent: {}
+[5.015251] (-) TimerEvent: {}
+[5.115563] (-) TimerEvent: {}
+[5.215824] (-) TimerEvent: {}
+[5.316191] (-) TimerEvent: {}
+[5.416528] (-) TimerEvent: {}
+[5.516814] (-) TimerEvent: {}
+[5.617210] (-) TimerEvent: {}
+[5.717554] (-) TimerEvent: {}
+[5.817810] (-) TimerEvent: {}
+[5.918180] (-) TimerEvent: {}
+[6.018442] (-) TimerEvent: {}
+[6.118721] (-) TimerEvent: {}
+[6.219006] (-) TimerEvent: {}
+[6.319310] (-) TimerEvent: {}
+[6.419636] (-) TimerEvent: {}
+[6.519992] (-) TimerEvent: {}
+[6.620307] (-) TimerEvent: {}
+[6.720577] (-) TimerEvent: {}
+[6.820826] (-) TimerEvent: {}
+[6.917122] (autonomous_driving) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.920987] (-) TimerEvent: {}
+[7.020354] (autonomous_driving) StdoutLine: {'line': b'-- Found ad_msgs: 0.0.0 (/home/joon/automotive_software_final/install/ad_msgs/share/ad_msgs/cmake)\n'}
+[7.021111] (-) TimerEvent: {}
+[7.121420] (-) TimerEvent: {}
+[7.165301] (autonomous_driving) StdoutLine: {'line': b'-- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)\n'}
+[7.175693] (autonomous_driving) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[7.221553] (-) TimerEvent: {}
+[7.321933] (-) TimerEvent: {}
+[7.422232] (-) TimerEvent: {}
+[7.441610] (autonomous_driving) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.466796] (autonomous_driving) StdoutLine: {'line': b'-- Generating done\n'}
+[7.475503] (autonomous_driving) StdoutLine: {'line': b'-- Build files have been written to: /home/joon/automotive_software_final/build/autonomous_driving\n'}
+[7.490445] (autonomous_driving) CommandEnded: {'returncode': 0}
+[7.491398] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'build'}
+[7.492481] (autonomous_driving) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/automotive_software_final/build/autonomous_driving', '--', '-j16', '-l16'], 'cwd': '/home/joon/automotive_software_final/build/autonomous_driving', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.58'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/automotive_software_final/install/ad_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cafe1382-8b51-49ca-87dd-990048d7e0ec.sock'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/503_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/automotive_software_final/build/autonomous_driving'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble')]), 'shell': False}
+[7.522388] (-) TimerEvent: {}
+[7.555304] (autonomous_driving) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target autonomous_driving\n'}
+[7.575352] (autonomous_driving) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o\n'}
+[7.622561] (-) TimerEvent: {}
+[7.722956] (-) TimerEvent: {}
+[7.823342] (-) TimerEvent: {}
+[7.923661] (-) TimerEvent: {}
+[8.023966] (-) TimerEvent: {}
+[8.124364] (-) TimerEvent: {}
+[8.224692] (-) TimerEvent: {}
+[8.325026] (-) TimerEvent: {}
+[8.425424] (-) TimerEvent: {}
+[8.525799] (-) TimerEvent: {}
+[8.626129] (-) TimerEvent: {}
+[8.726415] (-) TimerEvent: {}
+[8.826729] (-) TimerEvent: {}
+[8.927160] (-) TimerEvent: {}
+[9.027486] (-) TimerEvent: {}
+[9.127770] (-) TimerEvent: {}
+[9.228048] (-) TimerEvent: {}
+[9.328344] (-) TimerEvent: {}
+[9.428648] (-) TimerEvent: {}
+[9.529012] (-) TimerEvent: {}
+[9.629382] (-) TimerEvent: {}
+[9.729714] (-) TimerEvent: {}
+[9.734527] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98void lane_processor::LaneProcessor::GenerateEgoCenterLane(bool)\xe2\x80\x99:\n'}
+[9.734853] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:600:48: warning: unused parameter \xe2\x80\x98should_log\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.734948] (autonomous_driving) StderrLine: {'line': b'  600 | void LaneProcessor::GenerateEgoCenterLane(bool should_log) {\n'}
+[9.735018] (autonomous_driving) StderrLine: {'line': b'      |                                           ~~~~~^~~~~~~~~~\n'}
+[9.737651] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98void lane_processor::LaneProcessor::FilterStoredPointsByRange(const interface::VehicleState&)\xe2\x80\x99:\n'}
+[9.738205] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:667:78: warning: unused parameter \xe2\x80\x98vehicle_state\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.738431] (autonomous_driving) StderrLine: {'line': b'  667 | void LaneProcessor::FilterStoredPointsByRange(const interface::VehicleState& vehicle_state) {\n'}
+[9.738649] (autonomous_driving) StderrLine: {'line': b'      |                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[9.829861] (-) TimerEvent: {}
+[9.884616] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane1PointsMemoryVehicleFrame(const interface::VehicleState&) const\xe2\x80\x99:\n'}
+[9.884860] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:805:36: warning: unused parameter \xe2\x80\x98vehicle_state\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.884928] (autonomous_driving) StderrLine: {'line': b'  805 |     const interface::VehicleState& vehicle_state) const {\n'}
+[9.885462] (autonomous_driving) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[9.885591] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane2PointsMemoryVehicleFrame(const interface::VehicleState&) const\xe2\x80\x99:\n'}
+[9.885670] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:822:36: warning: unused parameter \xe2\x80\x98vehicle_state\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.885974] (autonomous_driving) StderrLine: {'line': b'  822 |     const interface::VehicleState& vehicle_state) const {\n'}
+[9.886117] (autonomous_driving) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[9.886206] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane3PointsMemoryVehicleFrame(const interface::VehicleState&) const\xe2\x80\x99:\n'}
+[9.886309] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:839:36: warning: unused parameter \xe2\x80\x98vehicle_state\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.886403] (autonomous_driving) StderrLine: {'line': b'  839 |     const interface::VehicleState& vehicle_state) const {\n'}
+[9.886498] (autonomous_driving) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[9.887094] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function \xe2\x80\x98std::vector<geometry_msgs::msg::Point_<std::allocator<void> > > lane_processor::LaneProcessor::getLane4PointsMemoryVehicleFrame(const interface::VehicleState&) const\xe2\x80\x99:\n'}
+[9.887243] (autonomous_driving) StderrLine: {'line': b'/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:856:36: warning: unused parameter \xe2\x80\x98vehicle_state\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.887308] (autonomous_driving) StderrLine: {'line': b'  856 |     const interface::VehicleState& vehicle_state) const {\n'}
+[9.887375] (autonomous_driving) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[9.930048] (-) TimerEvent: {}
+[10.030412] (-) TimerEvent: {}
+[10.130777] (-) TimerEvent: {}
+[10.231071] (-) TimerEvent: {}
+[10.331404] (-) TimerEvent: {}
+[10.431778] (-) TimerEvent: {}
+[10.532146] (-) TimerEvent: {}
+[10.632413] (-) TimerEvent: {}
+[10.732676] (-) TimerEvent: {}
+[10.832958] (-) TimerEvent: {}
+[10.933243] (-) TimerEvent: {}
+[11.033554] (-) TimerEvent: {}
+[11.133824] (-) TimerEvent: {}
+[11.234085] (-) TimerEvent: {}
+[11.334381] (-) TimerEvent: {}
+[11.434632] (-) TimerEvent: {}
+[11.534913] (-) TimerEvent: {}
+[11.635215] (-) TimerEvent: {}
+[11.735579] (-) TimerEvent: {}
+[11.836006] (-) TimerEvent: {}
+[11.936437] (-) TimerEvent: {}
+[12.036793] (-) TimerEvent: {}
+[12.137216] (-) TimerEvent: {}
+[12.237622] (-) TimerEvent: {}
+[12.338056] (-) TimerEvent: {}
+[12.438557] (-) TimerEvent: {}
+[12.538990] (-) TimerEvent: {}
+[12.639438] (-) TimerEvent: {}
+[12.739812] (-) TimerEvent: {}
+[12.840196] (-) TimerEvent: {}
+[12.940592] (-) TimerEvent: {}
+[13.040974] (-) TimerEvent: {}
+[13.141382] (-) TimerEvent: {}
+[13.241670] (-) TimerEvent: {}
+[13.341949] (-) TimerEvent: {}
+[13.442332] (-) TimerEvent: {}
+[13.542758] (-) TimerEvent: {}
+[13.643077] (-) TimerEvent: {}
+[13.743497] (-) TimerEvent: {}
+[13.843862] (-) TimerEvent: {}
+[13.944265] (-) TimerEvent: {}
+[14.044717] (-) TimerEvent: {}
+[14.145081] (-) TimerEvent: {}
+[14.245511] (-) TimerEvent: {}
+[14.345923] (-) TimerEvent: {}
+[14.446348] (-) TimerEvent: {}
+[14.546684] (-) TimerEvent: {}
+[14.647046] (-) TimerEvent: {}
+[14.747409] (-) TimerEvent: {}
+[14.847757] (-) TimerEvent: {}
+[14.948164] (-) TimerEvent: {}
+[15.048458] (-) TimerEvent: {}
+[15.148752] (-) TimerEvent: {}
+[15.249056] (-) TimerEvent: {}
+[15.349345] (-) TimerEvent: {}
+[15.449665] (-) TimerEvent: {}
+[15.549992] (-) TimerEvent: {}
+[15.650303] (-) TimerEvent: {}
+[15.750624] (-) TimerEvent: {}
+[15.851091] (-) TimerEvent: {}
+[15.951417] (-) TimerEvent: {}
+[16.051713] (-) TimerEvent: {}
+[16.152006] (-) TimerEvent: {}
+[16.252300] (-) TimerEvent: {}
+[16.352589] (-) TimerEvent: {}
+[16.452851] (-) TimerEvent: {}
+[16.553168] (-) TimerEvent: {}
+[16.653435] (-) TimerEvent: {}
+[16.753708] (-) TimerEvent: {}
+[16.854017] (-) TimerEvent: {}
+[16.954345] (-) TimerEvent: {}
+[17.054628] (-) TimerEvent: {}
+[17.154905] (-) TimerEvent: {}
+[17.222632] (autonomous_driving) StdoutLine: {'line': b'[ 66%] Linking CXX executable autonomous_driving\n'}
+[17.255091] (-) TimerEvent: {}
+[17.355384] (-) TimerEvent: {}
+[17.455718] (-) TimerEvent: {}
+[17.556107] (-) TimerEvent: {}
+[17.649840] (autonomous_driving) StdoutLine: {'line': b'[100%] Built target autonomous_driving\n'}
+[17.656273] (-) TimerEvent: {}
+[17.669559] (autonomous_driving) CommandEnded: {'returncode': 0}
+[17.670790] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'install'}
+[17.684008] (autonomous_driving) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/automotive_software_final/build/autonomous_driving'], 'cwd': '/home/joon/automotive_software_final/build/autonomous_driving', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.58'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/automotive_software_final/install/ad_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cafe1382-8b51-49ca-87dd-990048d7e0ec.sock'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/503_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/automotive_software_final/build/autonomous_driving'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/automotive_software_final/install/ad_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble')]), 'shell': False}
+[17.700380] (autonomous_driving) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[17.701315] (autonomous_driving) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[17.701802] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/autonomous_driving\n'}
+[17.702534] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml\n'}
+[17.703020] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier\n'}
+[17.703696] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml\n'}
+[17.704300] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier\n'}
+[17.704408] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/lib/autonomous_driving/simultaneous_inputs.py\n'}
+[17.704512] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/package_run_dependencies/autonomous_driving\n'}
+[17.704600] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/parent_prefix_path/autonomous_driving\n'}
+[17.704717] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.sh\n'}
+[17.704984] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.dsv\n'}
+[17.705442] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.sh\n'}
+[17.705565] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/environment/path.dsv\n'}
+[17.705889] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.bash\n'}
+[17.706032] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.sh\n'}
+[17.706384] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.zsh\n'}
+[17.706513] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/local_setup.dsv\n'}
+[17.706590] (autonomous_driving) StdoutLine: {'line': b'-- Symlinking: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.dsv\n'}
+[17.726978] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/ament_index/resource_index/packages/autonomous_driving\n'}
+[17.727283] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig.cmake\n'}
+[17.727363] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig-version.cmake\n'}
+[17.727425] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/automotive_software_final/install/autonomous_driving/share/autonomous_driving/package.xml\n'}
+[17.732546] (autonomous_driving) CommandEnded: {'returncode': 0}
+[17.756420] (-) TimerEvent: {}
+[17.771873] (autonomous_driving) JobEnded: {'identifier': 'autonomous_driving', 'rc': 0}
+[17.773275] (-) EventReactorShutdown: {}

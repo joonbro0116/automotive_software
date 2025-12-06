@@ -1,0 +1,4 @@
+/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp: In member function ‘void lane_processor::LaneProcessor::ClassifyAndStoreLanesByY(const std::vector<interface::Point2D>&, const interface::VehicleState&)’:
+/home/joon/automotive_software_final/src/app/autonomous_driving/src/lane_processor.cpp:137:36: warning: unused parameter ‘vehicle_state’ [-Wunused-parameter]
+  137 |     const interface::VehicleState& vehicle_state) {
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
