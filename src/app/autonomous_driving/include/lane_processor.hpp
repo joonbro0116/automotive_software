@@ -27,6 +27,9 @@ public:
     static constexpr double MIN_LANE_WIDTH = 1.5;
     static constexpr double MAX_LANE_WIDTH = 6.0;
 
+    /// HardReset 쿨다운 시간 (초). 연속 에러 시에도 이 간격보다 자주 리셋되지 않음
+    static constexpr double HARD_RESET_COOLDOWN_SEC = 1.0;
+
     // RECOVERY 모드 polyfit 생성을 위한 최소 포인트/x범위
     static constexpr size_t RECOVERY_MIN_POINTS = 10;
     static constexpr double RECOVERY_MIN_X_RANGE = 5.0;
@@ -81,25 +84,20 @@ private:
 
     void DownsampleLanePoints();
 
-    void FitLanePolynomials(const interface::VehicleState& vehicle_state, bool should_log);
+    void FitLanePolynomials(const interface::VehicleState& vehicle_state);
 
-    void GenerateEgoCenterLane(bool should_log);
-
-    void GenerateLane1And4ByExtrapolation();
+    void GenerateEgoCenterLane();
 
     void DetermineCurrentDriveway();
 
-    // Lane ordering 안전장치: y1 > y2 > y3 > y4 순서가 깨지면 이전 polyfit으로 롤백
-    bool EnforceLaneOrdering(bool should_log);
+    // Lane ordering 안전장치
+    bool EnforceLaneOrdering();
 
     // 이전 polyfit 저장 (롤백용)
     void SavePreviousPolyfits();
 
-    // 이전 lane 포인트 메모리 저장 (롤백용)
-    void SavePreviousLanePoints();
-
     // Driveway 변경 시 outer lane 재구성
-    void RebuildOuterLanesOnDrivewayChange(bool should_log);
+    void RebuildOuterLanesOnDrivewayChange();
 
     bool FitCubicPolynomial(
         const std::vector<interface::Point2D>& points,
@@ -129,7 +127,7 @@ private:
                           interface::PolyfitLane& target);
 
     // 에러 감지 함수: 차선 순서/폭/NaN 체크
-    bool HasLaneDetectionError(bool should_log);
+    bool HasLaneDetectionError();
 
     // 전체 메모리 초기화 및 RECOVERY 모드 진입
     void HardReset();
@@ -137,14 +135,67 @@ private:
     // NORMAL 모드 처리 (기존 로직)
     interface::PolyfitLanes ProcessNormalMode(
         const interface::Lane& input_lane_data,
-        const interface::VehicleState& vehicle_state,
-        bool should_log);
+        const interface::VehicleState& vehicle_state);
 
     // RECOVERY 모드 처리
     interface::PolyfitLanes ProcessRecoveryMode(
         const interface::Lane& input_lane_data,
-        const interface::VehicleState& vehicle_state,
-        bool should_log);
+        const interface::VehicleState& vehicle_state);
+
+    // ========== Helper 함수 (람다 대체) ==========
+
+    // Ego-motion compensation: 포인트 배열을 이전 vehicle frame에서 현재 frame으로 변환
+    void CompensateLanePoints(
+        std::vector<interface::Point2D>& pts,
+        const interface::VehicleState& from_state,
+        const interface::VehicleState& to_state);
+
+    // X 범위로 포인트 필터링 (MEMORY_X_MIN ~ MEMORY_X_MAX)
+    void FilterPointsByXRange(std::vector<interface::Point2D>& pts);
+
+    // X/Y 범위로 포인트 필터링 (MEMORY_X_MIN ~ MEMORY_X_MAX, -max_y ~ +max_y)
+    void FilterLanePointsByXYRange(std::vector<interface::Point2D>& pts, double max_y);
+
+    // 단일 레인 다운샘플링 (MAX_POINTS_PER_LANE 초과 시)
+    void DownsampleSingleLane(std::vector<interface::Point2D>& pts);
+
+    // 단일 레인 다운샘플링 (트리거 팩터 적용, 1.5배 초과 시만)
+    void DownsampleSingleLaneWithTrigger(std::vector<interface::Point2D>& pts);
+
+    // 포인트 배열의 x 범위 계산
+    double ComputeXRange(
+        const std::vector<interface::Point2D>& pts,
+        double& out_x_min,
+        double& out_x_max) const;
+
+    // Polyfit 계수가 유한한지 체크
+    bool CheckFinitePolyfit(const interface::PolyfitLane& poly) const;
+
+    // 두 레인이 너무 가까운지 (겹침) 체크
+    bool AreLanesTooClose(
+        const interface::PolyfitLane& a,
+        const interface::PolyfitLane& b) const;
+
+    // 단일 레인 피팅 수행
+    void FitSingleLane(
+        std::vector<interface::Point2D>& pts,
+        interface::PolyfitLane& poly,
+        bool& has_real_points,
+        bool relax_condition);
+
+    // 이전 polyfit 샘플과 혼합하여 refit
+    bool RefitWithSamples(
+        const std::vector<interface::Point2D>& pts,
+        interface::PolyfitLane& poly);
+
+    // Driveway 후보 추가 (폭 검사 포함)
+    bool TryAddDrivewayCandidate(
+        int id,
+        const interface::PolyfitLane& left,
+        const interface::PolyfitLane& right,
+        double ref_x,
+        int& out_best_id,
+        double& out_best_abs_center) const;
 
     // 멤버 변수
     int current_driveway_;
@@ -164,8 +215,6 @@ private:
     interface::PolyfitLane lane4_polyfit_;  // lane4 다항식
 
     interface::PolyfitLane ego_center_lane_;  // 현재 driveway 중심선
-
-    double last_log_time_;  // 마지막 로그 출력 시간
 
     // 실측 기반 여부 추적 (외분/내분으로만 만들어졌는지)
     bool lane1_is_generated_;
@@ -199,6 +248,13 @@ private:
     // RECOVERY 모드에서 사용할 포인트 버퍼
     std::vector<interface::Point2D> recovery_left_points_;
     std::vector<interface::Point2D> recovery_right_points_;
+
+    // 에러 카운터 (히스테리시스 처리용)
+    int consecutive_soft_error_frames_;
+    int consecutive_fatal_error_frames_;
+
+    /// 마지막 HardReset이 실행된 시각 (초, steady_clock 기준)
+    double last_hard_reset_time_;
 };
 
 }  // namespace lane_processor
