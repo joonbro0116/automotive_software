@@ -8,10 +8,28 @@
 
 namespace lane_processor {
 
+// 상태 머신 정의
+enum class LaneTrackingState {
+    INIT,       // 시뮬레이터 시작 직후 또는 HardReset 직후 (total_processed_frames_ < INITIALIZATION_FRAMES)
+    NORMAL,     // 정상 동작: 기존 로직으로 lane1~4 관리
+    RECOVERY    // 에러 발생 후, 메모리를 초기화하고 다시 천천히 레인을 재학습하는 상태
+};
+
 class LaneProcessor {
 public:
     // 초기화 단계 프레임 수 (1~2프레임)
     static constexpr int INITIALIZATION_FRAMES = 2;
+
+    // RECOVERY 모드에서 NORMAL로 전환하기 위한 안정 프레임 수
+    static constexpr int RECOVERY_STABLE_FRAMES = 10;
+
+    // 에러 검출용 상수: 차선 폭 범위
+    static constexpr double MIN_LANE_WIDTH = 1.5;
+    static constexpr double MAX_LANE_WIDTH = 6.0;
+
+    // RECOVERY 모드 polyfit 생성을 위한 최소 포인트/x범위
+    static constexpr size_t RECOVERY_MIN_POINTS = 10;
+    static constexpr double RECOVERY_MIN_X_RANGE = 5.0;
 
     // 메모리 저장 범위: x 최솟값 (차량 뒤쪽)
     static constexpr double MEMORY_X_MIN = -15.0;
@@ -20,7 +38,7 @@ public:
     static constexpr double MEMORY_X_MAX = 20.0;
 
     // 각 레인당 최대 포인트 개수
-    static constexpr size_t MAX_POINTS_PER_LANE = 50;
+    static constexpr size_t MAX_POINTS_PER_LANE = 100;
 
     LaneProcessor();
 
@@ -110,6 +128,24 @@ private:
                           const interface::PolyfitLane& ref,
                           interface::PolyfitLane& target);
 
+    // 에러 감지 함수: 차선 순서/폭/NaN 체크
+    bool HasLaneDetectionError(bool should_log);
+
+    // 전체 메모리 초기화 및 RECOVERY 모드 진입
+    void HardReset();
+
+    // NORMAL 모드 처리 (기존 로직)
+    interface::PolyfitLanes ProcessNormalMode(
+        const interface::Lane& input_lane_data,
+        const interface::VehicleState& vehicle_state,
+        bool should_log);
+
+    // RECOVERY 모드 처리
+    interface::PolyfitLanes ProcessRecoveryMode(
+        const interface::Lane& input_lane_data,
+        const interface::VehicleState& vehicle_state,
+        bool should_log);
+
     // 멤버 변수
     int current_driveway_;
     int prev_driveway_;  // 이전 프레임의 driveway (레인 체인지 감지용)
@@ -148,6 +184,21 @@ private:
     std::vector<interface::Point2D> prev_lane2_points_;
     std::vector<interface::Point2D> prev_lane3_points_;
     std::vector<interface::Point2D> prev_lane4_points_;
+
+    // ========== 상태 머신 관련 멤버 ==========
+    LaneTrackingState tracking_state_;
+
+    // RECOVERY 모드에서 사용할 가상 레인
+    interface::PolyfitLane virtual_left_lane_;
+    interface::PolyfitLane virtual_right_lane_;
+    bool virtual_left_valid_;
+    bool virtual_right_valid_;
+    int recovery_frames_;
+    int recovery_stable_count_;  // 연속으로 안정된 프레임 수
+
+    // RECOVERY 모드에서 사용할 포인트 버퍼
+    std::vector<interface::Point2D> recovery_left_points_;
+    std::vector<interface::Point2D> recovery_right_points_;
 };
 
 }  // namespace lane_processor
