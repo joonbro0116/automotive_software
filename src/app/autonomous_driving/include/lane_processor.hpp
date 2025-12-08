@@ -86,6 +86,10 @@ private:
 
     void FitLanePolynomials(const interface::VehicleState& vehicle_state);
 
+    // 기존 폴리핏을 사용하지 않고, 현재 lane*_points_ 메모리만으로
+    // lane1~lane4의 폴리핏을 "지금 차량 좌표계 기준"으로 한 번 갱신하는 함수
+    void UpdatePolyfitsFromMemoryOnly();
+
     void GenerateEgoCenterLane();
 
     void DetermineCurrentDriveway();

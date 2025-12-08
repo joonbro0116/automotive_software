@@ -139,10 +139,18 @@ interface::PolyfitLanes LaneProcessor::Process(
     const bool is_second_frame_or_later = (total_processed_frames_ >= 1);
 
     if (is_second_frame_or_later) {
+        // Step 1-1: 기존 포인트를 현재 차량 좌표계로 보정
         ApplyEgoMotionCompensation(vehicle_state);
 
-        // Step 1-1: 범위 밖으로 나간 포인트만 제거 (메모리 전체 재분류 X)
+        // Step 1-2: 범위 밖으로 나간 포인트만 제거 (메모리 전체 재분류 X)
         FilterStoredPointsByRange(vehicle_state);
+
+        // Step 1-3: NORMAL/INIT 모드일 때는, 보정된 메모리를 기반으로 먼저 폴리핏을 갱신
+        //           이렇게 해야 ClassifyAndStoreLanesByPolyfit()에서 사용하는 폴리핏이
+        //           "현재 차량 좌표계 기준"으로 업데이트된 최신 폴리핏이 됨
+        if (tracking_state_ != LaneTrackingState::RECOVERY) {
+            UpdatePolyfitsFromMemoryOnly();
+        }
     }
 
     // -------------------------------------------------------------------------
@@ -899,6 +907,48 @@ void LaneProcessor::RebuildOuterLanesOnDrivewayChange() {
         ExtrapolateLane2(lane3_polyfit_, lane4_polyfit_, lane1_polyfit_);
         lane1_is_generated_ = true;
     }
+}
+
+// ============================================================================
+// Update Polyfits From Memory Only (ego-motion 보정 후 폴리핏 선갱신)
+// ============================================================================
+
+/**
+ * @brief Updates lane polyfits using only current lane point buffers
+ *
+ * @details
+ * 이 함수는 ego-motion 보정이 끝난 lane*_points_만을 사용해서
+ * lane1~lane4 폴리핏을 "현재 차량 좌표계" 기준으로 한 번 갱신하는 역할을 한다.
+ *
+ * 이 함수에서는 다음을 수행하지 않는다:
+ *   - DetermineCurrentDriveway() 호출
+ *   - RebuildOuterLanesOnDrivewayChange() 호출
+ *   - prev_lane*_polyfit_ 관련 저장/롤백 로직
+ *   - generated 플래그 갱신
+ *   - ego_center_lane_ 갱신
+ *
+ * 목적:
+ *   ClassifyAndStoreLanesByPolyfit()에서 사용할 폴리핏이
+ *   "이전 프레임 기준"이 아닌 "현재 프레임 기준"이 되도록 선갱신
+ */
+void LaneProcessor::UpdatePolyfitsFromMemoryOnly() {
+    // 이 함수는 ego-motion 보정이 끝난 lane*_points_만을 사용해서
+    // lane1~lane4 폴리핏을 "현재 차량 좌표계" 기준으로 한 번 갱신하는 역할을 한다.
+    // driveway 변경/outer lane 로직은 사용하지 않는다.
+
+    bool lane1_has_real_points = false;
+    bool lane2_has_real_points = false;
+    bool lane3_has_real_points = false;
+    bool lane4_has_real_points = false;
+
+    // driveway와 상관없이, 단순히 각 레인을 독립적으로 피팅한다.
+    // relax_condition은 false로 설정하여 정상 기준 적용
+    FitSingleLane(lane1_points_, lane1_polyfit_, lane1_has_real_points, false);
+    FitSingleLane(lane2_points_, lane2_polyfit_, lane2_has_real_points, false);
+    FitSingleLane(lane3_points_, lane3_polyfit_, lane3_has_real_points, false);
+    FitSingleLane(lane4_points_, lane4_polyfit_, lane4_has_real_points, false);
+
+    // 여기서는 generated 플래그나 driveway, ego_center_lane_ 등은 건드리지 않는다.
 }
 
 // ============================================================================
