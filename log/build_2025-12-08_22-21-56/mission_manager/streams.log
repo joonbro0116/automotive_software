@@ -1,0 +1,54 @@
+[0.101s] Invoking command in '/home/joon/mission_hard/mission_hard/build/mission_manager': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/mission_hard/mission_hard/src/app/mission_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/joon/mission_hard/mission_hard/install/mission_manager
+[0.208s] -- The C compiler identification is GNU 11.4.0
+[0.647s] -- The CXX compiler identification is GNU 11.4.0
+[0.992s] -- Detecting C compiler ABI info
+[1.133s] -- Detecting C compiler ABI info - done
+[1.138s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.138s] -- Detecting C compile features
+[1.139s] -- Detecting C compile features - done
+[1.141s] -- Detecting CXX compiler ABI info
+[1.288s] -- Detecting CXX compiler ABI info - done
+[1.293s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.294s] -- Detecting CXX compile features
+[1.294s] -- Detecting CXX compile features - done
+[1.297s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.434s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.483s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.506s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[1.667s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.672s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.680s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.689s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.702s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.737s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.740s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.683s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.340s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.517s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.523s] -- Looking for pthread.h
+[4.634s] -- Looking for pthread.h - found
+[4.634s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.749s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.749s] -- Found Threads: TRUE  
+[4.792s] -- Found ad_msgs: 0.0.0 (/home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake)
+[4.885s] -- Found rviz_2d_overlay_msgs: 1.3.1 (/opt/ros/humble/share/rviz_2d_overlay_msgs/cmake)
+[4.901s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[4.909s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[5.007s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[5.068s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[5.069s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[5.069s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.089s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem 
+[5.173s] -- Configuring done
+[5.192s] -- Generating done
+[5.201s] -- Build files have been written to: /home/joon/mission_hard/mission_hard/build/mission_manager
+[5.214s] Invoked command in '/home/joon/mission_hard/mission_hard/build/mission_manager' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/mission_hard/mission_hard/src/app/mission_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/joon/mission_hard/mission_hard/install/mission_manager
+[5.217s] Invoking command in '/home/joon/mission_hard/mission_hard/build/mission_manager': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/mission_manager -- -j16 -l16
+[5.294s] [ 33%] [32mBuilding CXX object CMakeFiles/mission_manager.dir/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp.o[0m
+[5.295s] [ 66%] [32mBuilding CXX object CMakeFiles/mission_manager.dir/src/mission_manager_node.cpp.o[0m
+[6.602s] [01m[K/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp:[m[K In member function ‘[01m[Kbool SLanes::ImportLaneCsvFile(std::string)[m[K’:
+[6.602s] [01m[K/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp:26:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KnLaneID[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.602s]    26 |     int [01;35m[KnLaneID[m[K = 0;
+[6.602s]       |         [01;35m[K^~~~~~~[m[K
+[28.081s] [100%] [32m[1mLinking CXX executable mission_manager[0m
+[28.858s] [100%] Built target mission_manager

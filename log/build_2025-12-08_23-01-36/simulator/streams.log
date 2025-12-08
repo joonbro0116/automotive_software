@@ -1,0 +1,31 @@
+[0.323s] Invoking command in '/home/joon/mission_hard/mission_hard/build/simulator': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/simulator -- -j16 -l16
+[0.441s] [ 71%] Built target vehicle
+[0.442s] [ 85%] Built target lane_detection
+[0.442s] [ 42%] Building CXX object CMakeFiles/display.dir/src/display/display_node.cpp.o
+[43.371s] [100%] Linking CXX executable display
+[53.491s] [100%] Built target display
+[53.505s] Invoked command in '/home/joon/mission_hard/mission_hard/build/simulator' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/simulator -- -j16 -l16
+[53.508s] Invoking command in '/home/joon/mission_hard/mission_hard/build/simulator': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/simulator
+[53.516s] -- Install configuration: ""
+[53.516s] -- Execute custom install script
+[53.517s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/vehicle
+[53.517s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/lane_detection
+[53.517s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/display
+[53.518s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml
+[53.518s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml:Zone.Identifier
+[53.518s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/package_run_dependencies/simulator
+[53.518s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/parent_prefix_path/simulator
+[53.519s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.sh
+[53.519s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.dsv
+[53.520s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.sh
+[53.521s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.dsv
+[53.521s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.bash
+[53.521s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.sh
+[53.522s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.zsh
+[53.522s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.dsv
+[53.522s] -- Symlinking: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.dsv
+[53.535s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/packages/simulator
+[53.536s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig.cmake
+[53.536s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig-version.cmake
+[53.536s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.xml
+[53.538s] Invoked command in '/home/joon/mission_hard/mission_hard/build/simulator' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/simulator

@@ -1,0 +1,953 @@
+[0.000000] (-) TimerEvent: {}
+[0.000869] (ad_msgs) JobQueued: {'identifier': 'ad_msgs', 'dependencies': OrderedDict()}
+[0.000931] (autonomous_driving) JobQueued: {'identifier': 'autonomous_driving', 'dependencies': OrderedDict([('ad_msgs', '/home/joon/mission_hard/mission_hard/install/ad_msgs')])}
+[0.000977] (evaluation) JobQueued: {'identifier': 'evaluation', 'dependencies': OrderedDict([('ad_msgs', '/home/joon/mission_hard/mission_hard/install/ad_msgs')])}
+[0.001023] (mission_manager) JobQueued: {'identifier': 'mission_manager', 'dependencies': OrderedDict([('ad_msgs', '/home/joon/mission_hard/mission_hard/install/ad_msgs')])}
+[0.001066] (simulator) JobQueued: {'identifier': 'simulator', 'dependencies': OrderedDict([('ad_msgs', '/home/joon/mission_hard/mission_hard/install/ad_msgs')])}
+[0.001106] (ad_msgs) JobStarted: {'identifier': 'ad_msgs'}
+[0.011156] (ad_msgs) JobProgress: {'identifier': 'ad_msgs', 'progress': 'cmake'}
+[0.012633] (ad_msgs) JobProgress: {'identifier': 'ad_msgs', 'progress': 'build'}
+[0.014526] (ad_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/mission_hard/mission_hard/build/ad_msgs', '--', '-j16', '-l16'], 'cwd': '/home/joon/mission_hard/mission_hard/build/ad_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/ad_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.099423] (-) TimerEvent: {}
+[0.104326] (ad_msgs) StdoutLine: {'line': b'[  0%] Built target ad_msgs__cpp\n'}
+[0.118602] (ad_msgs) StdoutLine: {'line': b'[ 12%] Built target ad_msgs__rosidl_generator_c\n'}
+[0.118889] (ad_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_ad_msgs\n'}
+[0.148802] (ad_msgs) StdoutLine: {'line': b'[ 24%] Built target ad_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.150238] (ad_msgs) StdoutLine: {'line': b'[ 36%] Built target ad_msgs__rosidl_typesupport_cpp\n'}
+[0.156753] (ad_msgs) StdoutLine: {'line': b'[ 59%] Built target ad_msgs__rosidl_typesupport_c\n'}
+[0.157683] (ad_msgs) StdoutLine: {'line': b'[ 59%] Built target ad_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.159137] (ad_msgs) StdoutLine: {'line': b'[ 81%] Built target ad_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.159567] (ad_msgs) StdoutLine: {'line': b'[ 82%] Built target ad_msgs__rosidl_typesupport_introspection_c\n'}
+[0.184654] (ad_msgs) StdoutLine: {'line': b'[ 82%] Built target ad_msgs\n'}
+[0.199604] (-) TimerEvent: {}
+[0.215103] (ad_msgs) StdoutLine: {'line': b'[ 83%] Built target ad_msgs__py\n'}
+[0.247110] (ad_msgs) StdoutLine: {'line': b'[ 94%] Built target ad_msgs__rosidl_generator_py\n'}
+[0.275560] (ad_msgs) StdoutLine: {'line': b'[ 98%] Built target ad_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.275784] (ad_msgs) StdoutLine: {'line': b'[ 98%] Built target ad_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.277815] (ad_msgs) StdoutLine: {'line': b'[100%] Built target ad_msgs__rosidl_typesupport_c__pyext\n'}
+[0.299749] (-) TimerEvent: {}
+[0.383888] (ad_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.384688] (ad_msgs) StdoutLine: {'line': b'writing ad_msgs.egg-info/PKG-INFO\n'}
+[0.385258] (ad_msgs) StdoutLine: {'line': b'writing dependency_links to ad_msgs.egg-info/dependency_links.txt\n'}
+[0.385667] (ad_msgs) StdoutLine: {'line': b'writing top-level names to ad_msgs.egg-info/top_level.txt\n'}
+[0.389198] (ad_msgs) StdoutLine: {'line': b"reading manifest file 'ad_msgs.egg-info/SOURCES.txt'\n"}
+[0.390213] (ad_msgs) StdoutLine: {'line': b"writing manifest file 'ad_msgs.egg-info/SOURCES.txt'\n"}
+[0.399912] (-) TimerEvent: {}
+[0.435075] (ad_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_ad_msgs_egg\n'}
+[0.451084] (ad_msgs) CommandEnded: {'returncode': 0}
+[0.453470] (ad_msgs) JobProgress: {'identifier': 'ad_msgs', 'progress': 'install'}
+[0.464283] (ad_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/mission_hard/mission_hard/build/ad_msgs'], 'cwd': '/home/joon/mission_hard/mission_hard/build/ad_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/ad_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.479329] (ad_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.481143] (ad_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.482420] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ament_index/resource_index/rosidl_interfaces/ad_msgs\n'}
+[0.484175] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__functions.h\n'}
+[0.484959] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__struct.h\n'}
+[0.485169] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__type_support.h\n'}
+[0.485252] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__functions.h\n'}
+[0.485421] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__struct.h\n'}
+[0.486040] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__type_support.h\n'}
+[0.486919] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__functions.h\n'}
+[0.487223] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__struct.h\n'}
+[0.487685] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__type_support.h\n'}
+[0.487930] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__functions.h\n'}
+[0.488103] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__struct.h\n'}
+[0.488263] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__type_support.h\n'}
+[0.488484] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__functions.h\n'}
+[0.489187] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__struct.h\n'}
+[0.489724] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__type_support.h\n'}
+[0.489900] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__functions.h\n'}
+[0.490214] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__struct.h\n'}
+[0.490360] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__type_support.h\n'}
+[0.490490] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__functions.h\n'}
+[0.490623] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__struct.h\n'}
+[0.491364] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__type_support.h\n'}
+[0.491487] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__functions.h\n'}
+[0.491580] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__struct.h\n'}
+[0.491625] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__type_support.h\n'}
+[0.491663] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__functions.h\n'}
+[0.491702] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__struct.h\n'}
+[0.491740] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__type_support.h\n'}
+[0.491791] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__functions.h\n'}
+[0.491870] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__struct.h\n'}
+[0.491922] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__type_support.h\n'}
+[0.491961] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/lane_point_data.h\n'}
+[0.492010] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/lane_point_data_array.h\n'}
+[0.492069] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission.h\n'}
+[0.492109] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_display.h\n'}
+[0.492276] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_object.h\n'}
+[0.492448] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_region.h\n'}
+[0.492565] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/polyfit_lane_data.h\n'}
+[0.492710] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/polyfit_lane_data_array.h\n'}
+[0.492880] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.492989] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/vehicle_command.h\n'}
+[0.493158] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/vehicle_state.h\n'}
+[0.493280] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/library_path.sh\n'}
+[0.493399] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/library_path.dsv\n'}
+[0.493933] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494166] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494298] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494437] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494574] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494696] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494842] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__rosidl_typesupport_fastrtps_c.h\n'}
+[0.495735] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.495888] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_c.h\n'}
+[0.497012] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.497739] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.497891] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_introspection_c.h\n'}
+[0.498018] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__rosidl_typesupport_introspection_c.h\n'}
+[0.498118] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__rosidl_typesupport_introspection_c.h\n'}
+[0.498714] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__rosidl_typesupport_introspection_c.h\n'}
+[0.498855] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__rosidl_typesupport_introspection_c.h\n'}
+[0.499313] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__rosidl_typesupport_introspection_c.h\n'}
+[0.499753] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__rosidl_typesupport_introspection_c.h\n'}
+[0.500050] (-) TimerEvent: {}
+[0.500094] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__rosidl_typesupport_introspection_c.h\n'}
+[0.500226] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__rosidl_typesupport_introspection_c.h\n'}
+[0.500377] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h\n'}
+[0.500531] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.500669] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__builder.hpp\n'}
+[0.500798] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__struct.hpp\n'}
+[0.501362] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__traits.hpp\n'}
+[0.501578] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__type_support.hpp\n'}
+[0.501748] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__builder.hpp\n'}
+[0.501878] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__struct.hpp\n'}
+[0.502841] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__traits.hpp\n'}
+[0.502934] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__type_support.hpp\n'}
+[0.502976] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__builder.hpp\n'}
+[0.503023] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__struct.hpp\n'}
+[0.503054] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__traits.hpp\n'}
+[0.503085] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__type_support.hpp\n'}
+[0.503849] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__builder.hpp\n'}
+[0.503993] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__struct.hpp\n'}
+[0.504101] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__traits.hpp\n'}
+[0.504248] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__type_support.hpp\n'}
+[0.504396] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__builder.hpp\n'}
+[0.504515] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__struct.hpp\n'}
+[0.504632] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__traits.hpp\n'}
+[0.504994] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__type_support.hpp\n'}
+[0.505059] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__builder.hpp\n'}
+[0.505097] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__struct.hpp\n'}
+[0.505132] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__traits.hpp\n'}
+[0.505169] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__type_support.hpp\n'}
+[0.505203] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__builder.hpp\n'}
+[0.505238] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__struct.hpp\n'}
+[0.505271] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__traits.hpp\n'}
+[0.505523] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__type_support.hpp\n'}
+[0.505597] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__builder.hpp\n'}
+[0.505953] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__struct.hpp\n'}
+[0.506090] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__traits.hpp\n'}
+[0.506155] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__type_support.hpp\n'}
+[0.506212] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__builder.hpp\n'}
+[0.506264] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__struct.hpp\n'}
+[0.506319] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__traits.hpp\n'}
+[0.506380] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__type_support.hpp\n'}
+[0.506547] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__builder.hpp\n'}
+[0.506985] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__struct.hpp\n'}
+[0.507065] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__traits.hpp\n'}
+[0.507245] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__type_support.hpp\n'}
+[0.507454] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/lane_point_data.hpp\n'}
+[0.508432] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/lane_point_data_array.hpp\n'}
+[0.508731] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission.hpp\n'}
+[0.508890] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_display.hpp\n'}
+[0.509054] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_object.hpp\n'}
+[0.509492] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/mission_region.hpp\n'}
+[0.509600] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/polyfit_lane_data.hpp\n'}
+[0.509724] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/polyfit_lane_data_array.hpp\n'}
+[0.509841] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.510416] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/vehicle_command.hpp\n'}
+[0.510542] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/vehicle_state.hpp\n'}
+[0.510657] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.510777] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.510890] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511015] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511130] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511245] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511653] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511747] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511802] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.511967] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.512312] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.512698] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.512894] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/lane_point_data_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.513066] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.513185] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_display__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.513297] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_object__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.513408] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/mission_region__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.513709] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.514011] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/polyfit_lane_data_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.514126] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.514240] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/include/ad_msgs/ad_msgs/msg/detail/vehicle_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.514358] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/pythonpath.sh\n'}
+[0.514473] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/pythonpath.dsv\n'}
+[0.514589] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.514706] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.514822] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.514935] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.515053] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/__init__.py\n'}
+[0.515169] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/_ad_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.515321] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/_ad_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.516183] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/_ad_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.516914] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.517550] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.517634] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.517698] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/libad_msgs__rosidl_generator_py.so\n'}
+[0.517757] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/__init__.py\n'}
+[0.517933] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_lane_point_data.py\n'}
+[0.518112] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_lane_point_data_array.py\n'}
+[0.519098] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_lane_point_data_array_s.c\n'}
+[0.519183] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_lane_point_data_s.c\n'}
+[0.519248] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission.py\n'}
+[0.519299] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_display.py\n'}
+[0.519352] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_display_s.c\n'}
+[0.519586] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_object.py\n'}
+[0.519756] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_object_s.c\n'}
+[0.519825] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_region.py\n'}
+[0.519878] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_region_s.c\n'}
+[0.519929] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_mission_s.c\n'}
+[0.519965] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_polyfit_lane_data.py\n'}
+[0.519998] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_polyfit_lane_data_array.py\n'}
+[0.520036] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_polyfit_lane_data_array_s.c\n'}
+[0.520086] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_polyfit_lane_data_s.c\n'}
+[0.520136] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_vehicle_command.py\n'}
+[0.520193] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_vehicle_command_s.c\n'}
+[0.520229] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_vehicle_state.py\n'}
+[0.520264] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg/_vehicle_state_s.c\n'}
+[0.520307] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.520342] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.520374] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/ad_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.520422] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/VehicleState.idl\n'}
+[0.520474] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/VehicleCommand.idl\n'}
+[0.520514] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/Mission.idl\n'}
+[0.520555] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionObject.idl\n'}
+[0.520598] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionRegion.idl\n'}
+[0.520661] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionDisplay.idl\n'}
+[0.520724] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/PolyfitLaneData.idl\n'}
+[0.520791] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/LanePointData.idl\n'}
+[0.520846] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/LanePointDataArray.idl\n'}
+[0.520902] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/PolyfitLaneDataArray.idl\n'}
+[0.520959] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/VehicleState.msg\n'}
+[0.521013] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/VehicleCommand.msg\n'}
+[0.521055] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/Mission.msg\n'}
+[0.521107] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionObject.msg\n'}
+[0.521219] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionRegion.msg\n'}
+[0.521331] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/MissionDisplay.msg\n'}
+[0.521393] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/PolyfitLaneData.msg\n'}
+[0.521448] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/LanePointData.msg\n'}
+[0.521500] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/LanePointDataArray.msg\n'}
+[0.521552] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/msg/PolyfitLaneDataArray.msg\n'}
+[0.521603] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ament_index/resource_index/package_run_dependencies/ad_msgs\n'}
+[0.521654] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ament_index/resource_index/parent_prefix_path/ad_msgs\n'}
+[0.521707] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/ament_prefix_path.sh\n'}
+[0.521757] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/ament_prefix_path.dsv\n'}
+[0.521814] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/path.sh\n'}
+[0.521861] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/environment/path.dsv\n'}
+[0.521907] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/local_setup.bash\n'}
+[0.521959] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/local_setup.sh\n'}
+[0.522018] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/local_setup.zsh\n'}
+[0.522076] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/local_setup.dsv\n'}
+[0.522134] (ad_msgs) StdoutLine: {'line': b'-- Symlinking: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/package.dsv\n'}
+[0.529861] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ament_index/resource_index/packages/ad_msgs\n'}
+[0.530306] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.530435] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.530549] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.530934] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.531070] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.531112] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.531150] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.531187] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgsConfig.cmake\n'}
+[0.531233] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgsConfig-version.cmake\n'}
+[0.531282] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/package.xml\n'}
+[0.531662] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_generator_c.so\n'}
+[0.532377] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.532719] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.533137] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_c.so\n'}
+[0.533977] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.534124] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.534207] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_typesupport_cpp.so\n'}
+[0.576090] (ad_msgs) StdoutLine: {'line': b"Listing '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs'...\n"}
+[0.576325] (ad_msgs) StdoutLine: {'line': b"Listing '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages/ad_msgs/msg'...\n"}
+[0.581504] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/lib/libad_msgs__rosidl_generator_py.so\n'}
+[0.582421] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_generator_cExport.cmake\n'}
+[0.582603] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.582762] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.582931] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.583070] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.583214] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.583385] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.583976] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.584053] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.584090] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.584124] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.584156] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.584187] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.584218] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.584248] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/ad_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.584278] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.584308] (ad_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake/export_ad_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.585488] (ad_msgs) CommandEnded: {'returncode': 0}
+[0.601602] (-) TimerEvent: {}
+[0.625566] (ad_msgs) JobEnded: {'identifier': 'ad_msgs', 'rc': 0}
+[0.629445] (autonomous_driving) JobStarted: {'identifier': 'autonomous_driving'}
+[0.630518] (evaluation) JobStarted: {'identifier': 'evaluation'}
+[0.634360] (mission_manager) JobStarted: {'identifier': 'mission_manager'}
+[0.636971] (simulator) JobStarted: {'identifier': 'simulator'}
+[0.701784] (-) TimerEvent: {}
+[0.802166] (-) TimerEvent: {}
+[0.902488] (-) TimerEvent: {}
+[0.954989] (simulator) JobProgress: {'identifier': 'simulator', 'progress': 'cmake'}
+[0.957311] (simulator) JobProgress: {'identifier': 'simulator', 'progress': 'build'}
+[0.957790] (simulator) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/mission_hard/mission_hard/build/simulator', '--', '-j16', '-l16'], 'cwd': '/home/joon/mission_hard/mission_hard/build/simulator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/simulator'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[0.961447] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'cmake'}
+[0.962211] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'build'}
+[0.962736] (autonomous_driving) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/mission_hard/mission_hard/build/autonomous_driving', '--', '-j16', '-l16'], 'cwd': '/home/joon/mission_hard/mission_hard/build/autonomous_driving', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/autonomous_driving'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[0.973284] (evaluation) JobProgress: {'identifier': 'evaluation', 'progress': 'cmake'}
+[0.974612] (evaluation) JobProgress: {'identifier': 'evaluation', 'progress': 'build'}
+[0.975409] (evaluation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/mission_hard/mission_hard/build/evaluation', '--', '-j16', '-l16'], 'cwd': '/home/joon/mission_hard/mission_hard/build/evaluation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/evaluation'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[0.978407] (mission_manager) JobProgress: {'identifier': 'mission_manager', 'progress': 'cmake'}
+[0.984911] (mission_manager) JobProgress: {'identifier': 'mission_manager', 'progress': 'build'}
+[0.985489] (mission_manager) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joon/mission_hard/mission_hard/build/mission_manager', '--', '-j16', '-l16'], 'cwd': '/home/joon/mission_hard/mission_hard/build/mission_manager', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/mission_manager'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[1.002703] (-) TimerEvent: {}
+[1.062302] (autonomous_driving) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target autonomous_driving\n'}
+[1.077873] (simulator) StdoutLine: {'line': b'[ 71%] Built target vehicle\n'}
+[1.078132] (evaluation) StdoutLine: {'line': b'[100%] Built target evaluation\n'}
+[1.078534] (simulator) StdoutLine: {'line': b'[ 85%] Built target lane_detection\n'}
+[1.078717] (simulator) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/display.dir/src/display/display_node.cpp.o\n'}
+[1.087996] (autonomous_driving) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o\n'}
+[1.088188] (autonomous_driving) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.o\n'}
+[1.088519] (mission_manager) StdoutLine: {'line': b'[100%] Built target mission_manager\n'}
+[1.090698] (evaluation) CommandEnded: {'returncode': 0}
+[1.092199] (evaluation) JobProgress: {'identifier': 'evaluation', 'progress': 'install'}
+[1.092641] (evaluation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/mission_hard/mission_hard/build/evaluation'], 'cwd': '/home/joon/mission_hard/mission_hard/build/evaluation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/evaluation'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[1.102880] (-) TimerEvent: {}
+[1.104685] (evaluation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.105890] (evaluation) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.106274] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/lib/evaluation/evaluation\n'}
+[1.106419] (mission_manager) CommandEnded: {'returncode': 0}
+[1.107536] (mission_manager) JobProgress: {'identifier': 'mission_manager', 'progress': 'install'}
+[1.108151] (mission_manager) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/mission_hard/mission_hard/build/mission_manager'], 'cwd': '/home/joon/mission_hard/mission_hard/build/mission_manager', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/mission_manager'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[1.111024] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/launch/evaluation.launch.xml\n'}
+[1.111201] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/launch/evaluation.launch.xml:Zone.Identifier\n'}
+[1.111257] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/package_run_dependencies/evaluation\n'}
+[1.111311] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/parent_prefix_path/evaluation\n'}
+[1.111359] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/ament_prefix_path.sh\n'}
+[1.111410] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/ament_prefix_path.dsv\n'}
+[1.111522] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/path.sh\n'}
+[1.111595] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/path.dsv\n'}
+[1.111648] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.bash\n'}
+[1.111705] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.sh\n'}
+[1.111758] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.zsh\n'}
+[1.111823] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.dsv\n'}
+[1.111879] (evaluation) StdoutLine: {'line': b'-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/package.dsv\n'}
+[1.120295] (mission_manager) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.120914] (mission_manager) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.121332] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/lib/mission_manager/mission_manager\n'}
+[1.121804] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/launch/mission_manager.launch.xml\n'}
+[1.122719] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/launch/mission_manager.launch.xml:Zone.Identifier\n'}
+[1.122938] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/packages/evaluation\n'}
+[1.123113] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/cmake/evaluationConfig.cmake\n'}
+[1.123481] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/ament_index/resource_index/package_run_dependencies/mission_manager\n'}
+[1.123679] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/cmake/evaluationConfig-version.cmake\n'}
+[1.124062] (evaluation) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/package.xml\n'}
+[1.124184] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/ament_index/resource_index/parent_prefix_path/mission_manager\n'}
+[1.124255] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/environment/ament_prefix_path.sh\n'}
+[1.124312] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/environment/ament_prefix_path.dsv\n'}
+[1.125275] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/environment/path.sh\n'}
+[1.126089] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/environment/path.dsv\n'}
+[1.126257] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/local_setup.bash\n'}
+[1.126688] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/local_setup.sh\n'}
+[1.127497] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/local_setup.zsh\n'}
+[1.128660] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/local_setup.dsv\n'}
+[1.128831] (mission_manager) StdoutLine: {'line': b'-- Symlinking: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/package.dsv\n'}
+[1.128987] (evaluation) CommandEnded: {'returncode': 0}
+[1.150647] (evaluation) JobEnded: {'identifier': 'evaluation', 'rc': 0}
+[1.152794] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/ament_index/resource_index/packages/mission_manager\n'}
+[1.153038] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/cmake/mission_managerConfig.cmake\n'}
+[1.153209] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/cmake/mission_managerConfig-version.cmake\n'}
+[1.153367] (mission_manager) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/mission_manager/share/mission_manager/package.xml\n'}
+[1.153597] (mission_manager) CommandEnded: {'returncode': 0}
+[1.172789] (mission_manager) JobEnded: {'identifier': 'mission_manager', 'rc': 0}
+[1.203028] (-) TimerEvent: {}
+[1.303330] (-) TimerEvent: {}
+[1.403585] (-) TimerEvent: {}
+[1.503859] (-) TimerEvent: {}
+[1.604153] (-) TimerEvent: {}
+[1.704537] (-) TimerEvent: {}
+[1.804848] (-) TimerEvent: {}
+[1.905130] (-) TimerEvent: {}
+[2.005573] (-) TimerEvent: {}
+[2.106008] (-) TimerEvent: {}
+[2.206375] (-) TimerEvent: {}
+[2.306667] (-) TimerEvent: {}
+[2.406927] (-) TimerEvent: {}
+[2.507255] (-) TimerEvent: {}
+[2.607547] (-) TimerEvent: {}
+[2.707860] (-) TimerEvent: {}
+[2.808182] (-) TimerEvent: {}
+[2.908496] (-) TimerEvent: {}
+[3.009008] (-) TimerEvent: {}
+[3.109333] (-) TimerEvent: {}
+[3.209621] (-) TimerEvent: {}
+[3.309947] (-) TimerEvent: {}
+[3.410334] (-) TimerEvent: {}
+[3.510623] (-) TimerEvent: {}
+[3.610943] (-) TimerEvent: {}
+[3.711265] (-) TimerEvent: {}
+[3.811567] (-) TimerEvent: {}
+[3.911908] (-) TimerEvent: {}
+[4.012211] (-) TimerEvent: {}
+[4.112526] (-) TimerEvent: {}
+[4.212842] (-) TimerEvent: {}
+[4.313136] (-) TimerEvent: {}
+[4.413435] (-) TimerEvent: {}
+[4.513718] (-) TimerEvent: {}
+[4.613986] (-) TimerEvent: {}
+[4.714347] (-) TimerEvent: {}
+[4.815019] (-) TimerEvent: {}
+[4.915509] (-) TimerEvent: {}
+[5.015844] (-) TimerEvent: {}
+[5.116143] (-) TimerEvent: {}
+[5.216435] (-) TimerEvent: {}
+[5.316722] (-) TimerEvent: {}
+[5.417026] (-) TimerEvent: {}
+[5.517401] (-) TimerEvent: {}
+[5.617716] (-) TimerEvent: {}
+[5.724547] (-) TimerEvent: {}
+[5.824952] (-) TimerEvent: {}
+[5.925287] (-) TimerEvent: {}
+[6.025641] (-) TimerEvent: {}
+[6.125927] (-) TimerEvent: {}
+[6.226229] (-) TimerEvent: {}
+[6.326543] (-) TimerEvent: {}
+[6.426842] (-) TimerEvent: {}
+[6.527216] (-) TimerEvent: {}
+[6.627631] (-) TimerEvent: {}
+[6.727963] (-) TimerEvent: {}
+[6.828272] (-) TimerEvent: {}
+[6.928739] (-) TimerEvent: {}
+[7.029189] (-) TimerEvent: {}
+[7.684604] (-) TimerEvent: {}
+[7.790304] (-) TimerEvent: {}
+[7.890595] (-) TimerEvent: {}
+[7.990896] (-) TimerEvent: {}
+[8.091218] (-) TimerEvent: {}
+[8.191533] (-) TimerEvent: {}
+[8.292088] (-) TimerEvent: {}
+[8.392373] (-) TimerEvent: {}
+[8.492679] (-) TimerEvent: {}
+[8.593022] (-) TimerEvent: {}
+[8.693357] (-) TimerEvent: {}
+[8.793747] (-) TimerEvent: {}
+[8.894060] (-) TimerEvent: {}
+[8.994472] (-) TimerEvent: {}
+[9.094813] (-) TimerEvent: {}
+[9.195153] (-) TimerEvent: {}
+[9.295518] (-) TimerEvent: {}
+[9.395837] (-) TimerEvent: {}
+[9.496139] (-) TimerEvent: {}
+[9.596626] (-) TimerEvent: {}
+[9.696912] (-) TimerEvent: {}
+[9.797286] (-) TimerEvent: {}
+[9.897581] (-) TimerEvent: {}
+[9.997995] (-) TimerEvent: {}
+[10.098301] (-) TimerEvent: {}
+[10.198647] (-) TimerEvent: {}
+[10.298939] (-) TimerEvent: {}
+[10.399280] (-) TimerEvent: {}
+[10.499675] (-) TimerEvent: {}
+[10.602101] (-) TimerEvent: {}
+[10.702388] (-) TimerEvent: {}
+[10.802727] (-) TimerEvent: {}
+[10.903042] (-) TimerEvent: {}
+[11.003349] (-) TimerEvent: {}
+[11.103711] (-) TimerEvent: {}
+[11.204024] (-) TimerEvent: {}
+[11.304344] (-) TimerEvent: {}
+[11.404682] (-) TimerEvent: {}
+[11.504979] (-) TimerEvent: {}
+[11.605284] (-) TimerEvent: {}
+[11.705580] (-) TimerEvent: {}
+[11.805888] (-) TimerEvent: {}
+[11.906234] (-) TimerEvent: {}
+[12.006512] (-) TimerEvent: {}
+[12.106832] (-) TimerEvent: {}
+[12.207039] (-) TimerEvent: {}
+[12.307370] (-) TimerEvent: {}
+[12.407732] (-) TimerEvent: {}
+[12.508036] (-) TimerEvent: {}
+[12.608353] (-) TimerEvent: {}
+[12.708642] (-) TimerEvent: {}
+[12.808965] (-) TimerEvent: {}
+[12.909357] (-) TimerEvent: {}
+[13.009686] (-) TimerEvent: {}
+[13.110010] (-) TimerEvent: {}
+[13.210305] (-) TimerEvent: {}
+[13.310644] (-) TimerEvent: {}
+[13.411098] (-) TimerEvent: {}
+[13.511521] (-) TimerEvent: {}
+[13.611837] (-) TimerEvent: {}
+[13.712146] (-) TimerEvent: {}
+[13.812488] (-) TimerEvent: {}
+[13.913482] (-) TimerEvent: {}
+[14.013776] (-) TimerEvent: {}
+[14.114088] (-) TimerEvent: {}
+[14.214384] (-) TimerEvent: {}
+[14.314723] (-) TimerEvent: {}
+[14.415096] (-) TimerEvent: {}
+[14.515403] (-) TimerEvent: {}
+[14.615764] (-) TimerEvent: {}
+[14.716143] (-) TimerEvent: {}
+[14.816569] (-) TimerEvent: {}
+[14.916858] (-) TimerEvent: {}
+[15.017261] (-) TimerEvent: {}
+[15.117726] (-) TimerEvent: {}
+[15.218039] (-) TimerEvent: {}
+[15.318327] (-) TimerEvent: {}
+[15.418646] (-) TimerEvent: {}
+[15.519111] (-) TimerEvent: {}
+[15.619503] (-) TimerEvent: {}
+[15.719837] (-) TimerEvent: {}
+[15.820260] (-) TimerEvent: {}
+[15.920609] (-) TimerEvent: {}
+[16.020913] (-) TimerEvent: {}
+[16.121292] (-) TimerEvent: {}
+[16.221674] (-) TimerEvent: {}
+[16.322012] (-) TimerEvent: {}
+[16.422394] (-) TimerEvent: {}
+[16.522745] (-) TimerEvent: {}
+[16.623052] (-) TimerEvent: {}
+[16.723341] (-) TimerEvent: {}
+[16.823682] (-) TimerEvent: {}
+[16.923992] (-) TimerEvent: {}
+[17.024323] (-) TimerEvent: {}
+[17.124651] (-) TimerEvent: {}
+[17.225007] (-) TimerEvent: {}
+[17.325321] (-) TimerEvent: {}
+[17.425626] (-) TimerEvent: {}
+[17.526078] (-) TimerEvent: {}
+[17.626419] (-) TimerEvent: {}
+[17.726768] (-) TimerEvent: {}
+[17.827111] (-) TimerEvent: {}
+[17.927418] (-) TimerEvent: {}
+[18.027774] (-) TimerEvent: {}
+[18.128173] (-) TimerEvent: {}
+[18.228593] (-) TimerEvent: {}
+[18.328898] (-) TimerEvent: {}
+[18.429201] (-) TimerEvent: {}
+[18.529568] (-) TimerEvent: {}
+[18.629946] (-) TimerEvent: {}
+[18.730268] (-) TimerEvent: {}
+[18.830640] (-) TimerEvent: {}
+[18.931020] (-) TimerEvent: {}
+[19.031323] (-) TimerEvent: {}
+[19.131665] (-) TimerEvent: {}
+[19.231994] (-) TimerEvent: {}
+[19.332360] (-) TimerEvent: {}
+[19.432728] (-) TimerEvent: {}
+[19.533024] (-) TimerEvent: {}
+[19.633334] (-) TimerEvent: {}
+[19.733623] (-) TimerEvent: {}
+[19.833948] (-) TimerEvent: {}
+[19.934317] (-) TimerEvent: {}
+[20.034622] (-) TimerEvent: {}
+[20.134915] (-) TimerEvent: {}
+[20.235236] (-) TimerEvent: {}
+[20.335572] (-) TimerEvent: {}
+[20.435857] (-) TimerEvent: {}
+[20.536610] (-) TimerEvent: {}
+[20.636915] (-) TimerEvent: {}
+[20.737175] (-) TimerEvent: {}
+[20.837461] (-) TimerEvent: {}
+[20.937733] (-) TimerEvent: {}
+[21.037970] (-) TimerEvent: {}
+[21.138249] (-) TimerEvent: {}
+[21.238559] (-) TimerEvent: {}
+[21.338854] (-) TimerEvent: {}
+[21.439135] (-) TimerEvent: {}
+[21.539378] (-) TimerEvent: {}
+[21.639757] (-) TimerEvent: {}
+[21.740143] (-) TimerEvent: {}
+[21.840444] (-) TimerEvent: {}
+[21.940723] (-) TimerEvent: {}
+[22.041040] (-) TimerEvent: {}
+[22.141364] (-) TimerEvent: {}
+[22.241640] (-) TimerEvent: {}
+[22.342122] (-) TimerEvent: {}
+[22.442503] (-) TimerEvent: {}
+[22.542925] (-) TimerEvent: {}
+[22.643466] (-) TimerEvent: {}
+[22.743915] (-) TimerEvent: {}
+[22.844233] (-) TimerEvent: {}
+[22.944534] (-) TimerEvent: {}
+[23.044855] (-) TimerEvent: {}
+[23.145230] (-) TimerEvent: {}
+[23.245624] (-) TimerEvent: {}
+[23.345907] (-) TimerEvent: {}
+[23.446273] (-) TimerEvent: {}
+[23.546644] (-) TimerEvent: {}
+[23.646988] (-) TimerEvent: {}
+[23.747316] (-) TimerEvent: {}
+[23.847684] (-) TimerEvent: {}
+[23.948027] (-) TimerEvent: {}
+[24.048349] (-) TimerEvent: {}
+[24.148691] (-) TimerEvent: {}
+[24.249008] (-) TimerEvent: {}
+[24.349347] (-) TimerEvent: {}
+[24.449716] (-) TimerEvent: {}
+[24.550079] (-) TimerEvent: {}
+[24.650400] (-) TimerEvent: {}
+[24.750730] (-) TimerEvent: {}
+[24.851144] (-) TimerEvent: {}
+[24.951630] (-) TimerEvent: {}
+[25.052112] (-) TimerEvent: {}
+[25.152444] (-) TimerEvent: {}
+[25.252762] (-) TimerEvent: {}
+[25.353052] (-) TimerEvent: {}
+[25.453336] (-) TimerEvent: {}
+[25.553640] (-) TimerEvent: {}
+[25.653959] (-) TimerEvent: {}
+[25.754257] (-) TimerEvent: {}
+[25.854544] (-) TimerEvent: {}
+[25.954896] (-) TimerEvent: {}
+[26.055209] (-) TimerEvent: {}
+[26.155588] (-) TimerEvent: {}
+[26.256023] (-) TimerEvent: {}
+[26.356326] (-) TimerEvent: {}
+[26.456592] (-) TimerEvent: {}
+[26.556883] (-) TimerEvent: {}
+[26.657256] (-) TimerEvent: {}
+[26.757589] (-) TimerEvent: {}
+[26.857986] (-) TimerEvent: {}
+[26.958404] (-) TimerEvent: {}
+[27.058710] (-) TimerEvent: {}
+[27.159012] (-) TimerEvent: {}
+[27.259377] (-) TimerEvent: {}
+[27.359819] (-) TimerEvent: {}
+[27.460150] (-) TimerEvent: {}
+[27.560515] (-) TimerEvent: {}
+[27.660856] (-) TimerEvent: {}
+[27.761163] (-) TimerEvent: {}
+[27.861511] (-) TimerEvent: {}
+[27.961871] (-) TimerEvent: {}
+[28.062271] (-) TimerEvent: {}
+[28.162638] (-) TimerEvent: {}
+[28.263002] (-) TimerEvent: {}
+[28.363346] (-) TimerEvent: {}
+[28.463667] (-) TimerEvent: {}
+[28.563958] (-) TimerEvent: {}
+[28.664240] (-) TimerEvent: {}
+[28.764541] (-) TimerEvent: {}
+[28.864815] (-) TimerEvent: {}
+[28.965172] (-) TimerEvent: {}
+[29.065580] (-) TimerEvent: {}
+[29.165936] (-) TimerEvent: {}
+[29.266232] (-) TimerEvent: {}
+[29.366541] (-) TimerEvent: {}
+[29.466826] (-) TimerEvent: {}
+[29.567134] (-) TimerEvent: {}
+[29.667480] (-) TimerEvent: {}
+[29.767780] (-) TimerEvent: {}
+[29.868103] (-) TimerEvent: {}
+[29.968390] (-) TimerEvent: {}
+[30.068684] (-) TimerEvent: {}
+[30.168998] (-) TimerEvent: {}
+[30.269262] (-) TimerEvent: {}
+[30.369545] (-) TimerEvent: {}
+[30.469896] (-) TimerEvent: {}
+[30.570254] (-) TimerEvent: {}
+[30.670536] (-) TimerEvent: {}
+[30.770868] (-) TimerEvent: {}
+[30.871475] (-) TimerEvent: {}
+[30.971821] (-) TimerEvent: {}
+[31.072251] (-) TimerEvent: {}
+[31.172664] (-) TimerEvent: {}
+[31.272963] (-) TimerEvent: {}
+[31.373286] (-) TimerEvent: {}
+[31.473544] (-) TimerEvent: {}
+[31.573830] (-) TimerEvent: {}
+[31.674127] (-) TimerEvent: {}
+[31.774391] (-) TimerEvent: {}
+[31.874793] (-) TimerEvent: {}
+[31.975220] (-) TimerEvent: {}
+[32.075552] (-) TimerEvent: {}
+[32.175869] (-) TimerEvent: {}
+[32.276181] (-) TimerEvent: {}
+[32.376480] (-) TimerEvent: {}
+[32.476765] (-) TimerEvent: {}
+[32.577072] (-) TimerEvent: {}
+[32.677398] (-) TimerEvent: {}
+[32.777716] (-) TimerEvent: {}
+[32.878067] (-) TimerEvent: {}
+[32.978371] (-) TimerEvent: {}
+[33.078679] (-) TimerEvent: {}
+[33.178952] (-) TimerEvent: {}
+[33.279248] (-) TimerEvent: {}
+[33.379737] (-) TimerEvent: {}
+[33.480149] (-) TimerEvent: {}
+[33.580394] (-) TimerEvent: {}
+[33.680677] (-) TimerEvent: {}
+[33.780974] (-) TimerEvent: {}
+[33.881281] (-) TimerEvent: {}
+[33.981552] (-) TimerEvent: {}
+[34.081963] (-) TimerEvent: {}
+[34.182259] (-) TimerEvent: {}
+[34.282578] (-) TimerEvent: {}
+[34.382939] (-) TimerEvent: {}
+[34.483247] (-) TimerEvent: {}
+[34.583595] (-) TimerEvent: {}
+[34.683911] (-) TimerEvent: {}
+[34.784197] (-) TimerEvent: {}
+[34.884539] (-) TimerEvent: {}
+[34.984818] (-) TimerEvent: {}
+[35.085142] (-) TimerEvent: {}
+[35.185462] (-) TimerEvent: {}
+[35.285734] (-) TimerEvent: {}
+[35.386027] (-) TimerEvent: {}
+[35.486345] (-) TimerEvent: {}
+[35.586643] (-) TimerEvent: {}
+[35.686902] (-) TimerEvent: {}
+[35.787167] (-) TimerEvent: {}
+[35.887587] (-) TimerEvent: {}
+[35.987989] (-) TimerEvent: {}
+[36.088301] (-) TimerEvent: {}
+[36.188709] (-) TimerEvent: {}
+[36.289106] (-) TimerEvent: {}
+[36.389417] (-) TimerEvent: {}
+[36.489771] (-) TimerEvent: {}
+[36.590060] (-) TimerEvent: {}
+[36.690376] (-) TimerEvent: {}
+[36.790727] (-) TimerEvent: {}
+[36.891056] (-) TimerEvent: {}
+[36.991364] (-) TimerEvent: {}
+[37.091673] (-) TimerEvent: {}
+[37.192256] (-) TimerEvent: {}
+[37.391858] (-) TimerEvent: {}
+[37.492199] (-) TimerEvent: {}
+[37.592514] (-) TimerEvent: {}
+[37.692787] (-) TimerEvent: {}
+[37.793054] (-) TimerEvent: {}
+[37.893411] (-) TimerEvent: {}
+[37.993846] (-) TimerEvent: {}
+[38.094126] (-) TimerEvent: {}
+[38.194466] (-) TimerEvent: {}
+[38.294806] (-) TimerEvent: {}
+[38.395211] (-) TimerEvent: {}
+[38.495536] (-) TimerEvent: {}
+[38.595818] (-) TimerEvent: {}
+[38.696143] (-) TimerEvent: {}
+[38.796537] (-) TimerEvent: {}
+[38.896809] (-) TimerEvent: {}
+[38.997077] (-) TimerEvent: {}
+[39.097475] (-) TimerEvent: {}
+[39.197738] (-) TimerEvent: {}
+[39.298081] (-) TimerEvent: {}
+[39.384975] (autonomous_driving) StdoutLine: {'line': b'[100%] Linking CXX executable autonomous_driving\n'}
+[39.398281] (-) TimerEvent: {}
+[39.498604] (-) TimerEvent: {}
+[39.598945] (-) TimerEvent: {}
+[39.699229] (-) TimerEvent: {}
+[39.799547] (-) TimerEvent: {}
+[39.900930] (-) TimerEvent: {}
+[40.001289] (-) TimerEvent: {}
+[40.101617] (-) TimerEvent: {}
+[40.201911] (-) TimerEvent: {}
+[40.302192] (-) TimerEvent: {}
+[40.402569] (-) TimerEvent: {}
+[40.502901] (-) TimerEvent: {}
+[40.603210] (-) TimerEvent: {}
+[40.703571] (-) TimerEvent: {}
+[40.803982] (-) TimerEvent: {}
+[40.904236] (-) TimerEvent: {}
+[41.004489] (-) TimerEvent: {}
+[41.104798] (-) TimerEvent: {}
+[41.205075] (-) TimerEvent: {}
+[41.305402] (-) TimerEvent: {}
+[41.405730] (-) TimerEvent: {}
+[41.506126] (-) TimerEvent: {}
+[41.606469] (-) TimerEvent: {}
+[41.706745] (-) TimerEvent: {}
+[41.807056] (-) TimerEvent: {}
+[41.907488] (-) TimerEvent: {}
+[42.017574] (-) TimerEvent: {}
+[42.117838] (-) TimerEvent: {}
+[42.218127] (-) TimerEvent: {}
+[42.318406] (-) TimerEvent: {}
+[42.418697] (-) TimerEvent: {}
+[42.519093] (-) TimerEvent: {}
+[42.619346] (-) TimerEvent: {}
+[42.719650] (-) TimerEvent: {}
+[42.819925] (-) TimerEvent: {}
+[42.920208] (-) TimerEvent: {}
+[43.020567] (-) TimerEvent: {}
+[43.120902] (-) TimerEvent: {}
+[43.221235] (-) TimerEvent: {}
+[43.321598] (-) TimerEvent: {}
+[43.422082] (-) TimerEvent: {}
+[43.522352] (-) TimerEvent: {}
+[43.622673] (-) TimerEvent: {}
+[43.723018] (-) TimerEvent: {}
+[43.823316] (-) TimerEvent: {}
+[43.923599] (-) TimerEvent: {}
+[44.008257] (simulator) StdoutLine: {'line': b'[100%] Linking CXX executable display\n'}
+[44.023758] (-) TimerEvent: {}
+[44.124058] (-) TimerEvent: {}
+[44.224407] (-) TimerEvent: {}
+[44.324873] (-) TimerEvent: {}
+[44.425233] (-) TimerEvent: {}
+[44.525545] (-) TimerEvent: {}
+[44.625961] (-) TimerEvent: {}
+[44.726248] (-) TimerEvent: {}
+[44.826556] (-) TimerEvent: {}
+[44.926913] (-) TimerEvent: {}
+[45.027270] (-) TimerEvent: {}
+[45.127566] (-) TimerEvent: {}
+[45.227900] (-) TimerEvent: {}
+[45.328193] (-) TimerEvent: {}
+[45.428592] (-) TimerEvent: {}
+[45.528865] (-) TimerEvent: {}
+[45.629267] (-) TimerEvent: {}
+[45.729645] (-) TimerEvent: {}
+[45.830010] (-) TimerEvent: {}
+[45.930498] (-) TimerEvent: {}
+[46.030813] (-) TimerEvent: {}
+[46.131646] (-) TimerEvent: {}
+[46.233272] (-) TimerEvent: {}
+[46.333587] (-) TimerEvent: {}
+[46.433973] (-) TimerEvent: {}
+[46.534386] (-) TimerEvent: {}
+[46.634754] (-) TimerEvent: {}
+[46.735182] (-) TimerEvent: {}
+[46.835665] (-) TimerEvent: {}
+[46.935910] (-) TimerEvent: {}
+[47.036193] (-) TimerEvent: {}
+[47.136495] (-) TimerEvent: {}
+[47.236788] (-) TimerEvent: {}
+[47.337137] (-) TimerEvent: {}
+[47.437469] (-) TimerEvent: {}
+[47.537791] (-) TimerEvent: {}
+[47.638177] (-) TimerEvent: {}
+[47.738681] (-) TimerEvent: {}
+[47.839054] (-) TimerEvent: {}
+[47.939399] (-) TimerEvent: {}
+[48.039760] (-) TimerEvent: {}
+[48.140188] (-) TimerEvent: {}
+[48.240751] (-) TimerEvent: {}
+[48.341086] (-) TimerEvent: {}
+[48.441486] (-) TimerEvent: {}
+[48.541759] (-) TimerEvent: {}
+[48.642169] (-) TimerEvent: {}
+[48.742542] (-) TimerEvent: {}
+[48.842822] (-) TimerEvent: {}
+[48.943122] (-) TimerEvent: {}
+[49.043503] (-) TimerEvent: {}
+[49.143824] (-) TimerEvent: {}
+[49.244117] (-) TimerEvent: {}
+[49.344545] (-) TimerEvent: {}
+[49.444958] (-) TimerEvent: {}
+[49.545273] (-) TimerEvent: {}
+[49.645605] (-) TimerEvent: {}
+[49.745895] (-) TimerEvent: {}
+[49.846199] (-) TimerEvent: {}
+[49.946486] (-) TimerEvent: {}
+[50.046789] (-) TimerEvent: {}
+[50.147059] (-) TimerEvent: {}
+[50.247355] (-) TimerEvent: {}
+[50.347650] (-) TimerEvent: {}
+[50.387990] (autonomous_driving) StdoutLine: {'line': b'[100%] Built target autonomous_driving\n'}
+[50.410240] (autonomous_driving) CommandEnded: {'returncode': 0}
+[50.411490] (autonomous_driving) JobProgress: {'identifier': 'autonomous_driving', 'progress': 'install'}
+[50.411988] (autonomous_driving) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/mission_hard/mission_hard/build/autonomous_driving'], 'cwd': '/home/joon/mission_hard/mission_hard/build/autonomous_driving', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/autonomous_driving'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[50.421152] (autonomous_driving) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[50.425187] (autonomous_driving) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[50.425690] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/lib/autonomous_driving/autonomous_driving\n'}
+[50.425947] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml\n'}
+[50.426356] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier\n'}
+[50.426806] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier:Zone.Identifier\n'}
+[50.426866] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml\n'}
+[50.426967] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier\n'}
+[50.427015] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier:Zone.Identifier\n'}
+[50.428388] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/lib/autonomous_driving/simultaneous_inputs.py\n'}
+[50.428492] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/package_run_dependencies/autonomous_driving\n'}
+[50.428537] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/parent_prefix_path/autonomous_driving\n'}
+[50.428584] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.sh\n'}
+[50.428617] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.dsv\n'}
+[50.428649] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/path.sh\n'}
+[50.428687] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/path.dsv\n'}
+[50.428718] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.bash\n'}
+[50.428749] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.sh\n'}
+[50.428779] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.zsh\n'}
+[50.428809] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.dsv\n'}
+[50.428839] (autonomous_driving) StdoutLine: {'line': b'-- Symlinking: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/package.dsv\n'}
+[50.440510] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/packages/autonomous_driving\n'}
+[50.440865] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig.cmake\n'}
+[50.440922] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig-version.cmake\n'}
+[50.440980] (autonomous_driving) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/package.xml\n'}
+[50.443565] (autonomous_driving) CommandEnded: {'returncode': 0}
+[50.447809] (-) TimerEvent: {}
+[50.461397] (autonomous_driving) JobEnded: {'identifier': 'autonomous_driving', 'rc': 0}
+[50.548015] (-) TimerEvent: {}
+[50.648605] (-) TimerEvent: {}
+[50.749080] (-) TimerEvent: {}
+[50.849643] (-) TimerEvent: {}
+[50.950075] (-) TimerEvent: {}
+[51.050451] (-) TimerEvent: {}
+[51.150904] (-) TimerEvent: {}
+[51.251328] (-) TimerEvent: {}
+[51.351657] (-) TimerEvent: {}
+[51.451992] (-) TimerEvent: {}
+[51.552344] (-) TimerEvent: {}
+[51.652741] (-) TimerEvent: {}
+[51.753115] (-) TimerEvent: {}
+[51.853397] (-) TimerEvent: {}
+[51.953815] (-) TimerEvent: {}
+[52.054294] (-) TimerEvent: {}
+[52.154641] (-) TimerEvent: {}
+[52.254963] (-) TimerEvent: {}
+[52.355279] (-) TimerEvent: {}
+[52.455579] (-) TimerEvent: {}
+[52.555894] (-) TimerEvent: {}
+[52.656253] (-) TimerEvent: {}
+[52.756647] (-) TimerEvent: {}
+[52.856981] (-) TimerEvent: {}
+[52.957268] (-) TimerEvent: {}
+[53.057553] (-) TimerEvent: {}
+[53.157901] (-) TimerEvent: {}
+[53.258198] (-) TimerEvent: {}
+[53.358504] (-) TimerEvent: {}
+[53.458824] (-) TimerEvent: {}
+[53.559116] (-) TimerEvent: {}
+[53.659377] (-) TimerEvent: {}
+[53.759670] (-) TimerEvent: {}
+[53.859995] (-) TimerEvent: {}
+[53.960285] (-) TimerEvent: {}
+[54.060572] (-) TimerEvent: {}
+[54.127467] (simulator) StdoutLine: {'line': b'[100%] Built target display\n'}
+[54.141778] (simulator) CommandEnded: {'returncode': 0}
+[54.143466] (simulator) JobProgress: {'identifier': 'simulator', 'progress': 'install'}
+[54.143565] (simulator) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joon/mission_hard/mission_hard/build/simulator'], 'cwd': '/home/joon/mission_hard/mission_hard/build/simulator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('USER', 'joon'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"ko","osLocale":"ko","resolvedLanguage":"ko","defaultMessagesFile":"/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","messagesFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/nls.messages.json","corruptMarkerFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"},"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"6f26367f4a75d0dc3582ad23c0fe941f.ko","_languagePackSupport":true,"_translationsConfigFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/tcf.json","_cacheRoot":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko","_resolvedLanguagePackCoreLocation":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/bf9252a2fb45be6893dd8870c0bf37e2e1766d61","_corruptedFile":"/home/joon/.vscode-server/data/clp/6f26367f4a75d0dc3582ad23c0fe941f.ko/corrupted.info"}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/ksyj0/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.1.60'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/joon'), ('OLDPWD', '/home/joon'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed31b2d6-252f-4843-b5d4-069ea3af9112.sock'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', 'vscode-local:/c%3A/Users/ksyj0/.vscode/extensions/ms-ceintl.vscode-language-pack-ko-1.106.2025111209/translations/extensions/vscode.json-language-features.i18n.json'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('LOGNAME', 'joon'), ('NAME', 'Joon'), ('WSL_INTEROP', '/run/WSL/523_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('PATH', '/home/joon/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/home/joon/.local/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ksyj0/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ksyj0/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ksyj0/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ksyj0/AppData/Roaming/npm:/mnt/c/Users/ksyj0/AppData/Local/SOOP:/mnt/c/Users/ksyj0/AppData/Local/Programs/Kiro/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/joon/mission_hard/mission_hard/build/simulator'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/joon/mission_hard/mission_hard/install/ad_msgs')]), 'shell': False}
+[54.152563] (simulator) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[54.153363] (simulator) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[54.153808] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/vehicle\n'}
+[54.154127] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/lane_detection\n'}
+[54.154235] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/display\n'}
+[54.154741] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml\n'}
+[54.154842] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml:Zone.Identifier\n'}
+[54.155026] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/package_run_dependencies/simulator\n'}
+[54.155233] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/parent_prefix_path/simulator\n'}
+[54.155560] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.sh\n'}
+[54.156249] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.dsv\n'}
+[54.156866] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.sh\n'}
+[54.157738] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.dsv\n'}
+[54.158008] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.bash\n'}
+[54.158403] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.sh\n'}
+[54.158570] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.zsh\n'}
+[54.158644] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.dsv\n'}
+[54.158698] (simulator) StdoutLine: {'line': b'-- Symlinking: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.dsv\n'}
+[54.160767] (-) TimerEvent: {}
+[54.172166] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/packages/simulator\n'}
+[54.172486] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig.cmake\n'}
+[54.172904] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig-version.cmake\n'}
+[54.172989] (simulator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.xml\n'}
+[54.174336] (simulator) CommandEnded: {'returncode': 0}
+[54.194929] (simulator) JobEnded: {'identifier': 'simulator', 'rc': 0}
+[54.196718] (-) EventReactorShutdown: {}

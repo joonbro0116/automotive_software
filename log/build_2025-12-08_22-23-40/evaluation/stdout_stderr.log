@@ -1,0 +1,29 @@
+[35m[1mConsolidate compiler generated dependencies of target evaluation[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/evaluation.dir/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/evaluation.dir/src/evaluation_node.cpp.o[0m
+[01m[K/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp:[m[K In member function ‘[01m[Kbool SLanes::ImportLaneCsvFile(std::string)[m[K’:
+[01m[K/home/joon/mission_hard/mission_hard/src/bsw/system/interface/interface_lane.cpp:26:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KnLaneID[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   26 |     int [01;35m[KnLaneID[m[K = 0;
+      |         [01;35m[K^~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable evaluation[0m
+[100%] Built target evaluation
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/lib/evaluation/evaluation
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/launch/evaluation.launch.xml
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/launch/evaluation.launch.xml:Zone.Identifier
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/package_run_dependencies/evaluation
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/parent_prefix_path/evaluation
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/ament_prefix_path.sh
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/ament_prefix_path.dsv
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/path.sh
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/environment/path.dsv
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.bash
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.sh
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.zsh
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/local_setup.dsv
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/package.dsv
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/ament_index/resource_index/packages/evaluation
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/cmake/evaluationConfig.cmake
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/cmake/evaluationConfig-version.cmake
+-- Symlinking: /home/joon/mission_hard/mission_hard/install/evaluation/share/evaluation/package.xml

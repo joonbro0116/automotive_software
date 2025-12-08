@@ -1,0 +1,15 @@
+{
+  "package_name": "ad_msgs",
+  "non_idl_tuples": [
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/VehicleState.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/VehicleCommand.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/Mission.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/MissionObject.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/MissionRegion.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/MissionDisplay.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/PolyfitLaneData.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/LanePointData.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/LanePointDataArray.msg",
+    "/home/joon/mission_hard/mission_hard/src/rte/msg/ad_msgs:msg/PolyfitLaneDataArray.msg"
+  ]
+}
