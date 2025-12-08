@@ -66,6 +66,8 @@ AutonomousDriving::AutonomousDriving(const std::string &node_name, const rclcpp:
         "polyfit_lanes_marker", qos_profile);
     p_driving_way_marker_ = this->create_publisher<visualization_msgs::msg::MarkerArray>(
         "driving_way_marker", qos_profile);
+    p_lane_info_text_ = this->create_publisher<visualization_msgs::msg::MarkerArray>(
+        "lane_info_text", qos_profile);
 
     // Timer init
     t_run_node_ = this->create_wall_timer(
@@ -222,13 +224,23 @@ void AutonomousDriving::Run() {
     }
 
     // SPHERE_LIST 마커 생성 (샘플 포인트)
+    // lane_processor 내부와 동일한 범위/개수로 샘플 포인트 시각화
+    // PRIMARY_LANE_NUM_SAMPLES = 80, MEMORY_X_MIN = -15.0, MEMORY_X_MAX = 20.0
 
     for (const auto& poly_lane : poly_lanes.polyfitlanes) {
-        // Generate sample points for this lane
-        const double x_start = -5.0;  // SAMPLE_X_START
-        const double x_end = 10.0;    // SAMPLE_X_END
-        const int num_points = 30;
-        const double x_step = (x_end - x_start) / (num_points - 1);
+        // polyfit의 실제 x 범위 사용 (내부 피팅 범위와 동일)
+        double sample_x_start = poly_lane.x_start;
+        double sample_x_end = poly_lane.x_end;
+
+        // 유효하지 않은 범위인 경우 기본값 사용
+        const bool invalid_x_range = (sample_x_end <= sample_x_start);
+        if (invalid_x_range) {
+            sample_x_start = -15.0;  // MEMORY_X_MIN
+            sample_x_end = 20.0;     // MEMORY_X_MAX
+        }
+
+        const int num_points = 80;  // PRIMARY_LANE_NUM_SAMPLES와 동일
+        const double x_step = (sample_x_end - sample_x_start) / (num_points - 1);
 
         visualization_msgs::msg::Marker marker;
         marker.header.frame_id = lane_points.frame_id.empty() ? "vehicle" : lane_points.frame_id;
@@ -238,9 +250,9 @@ void AutonomousDriving::Run() {
         marker.type = visualization_msgs::msg::Marker::SPHERE_LIST;
         marker.action = visualization_msgs::msg::Marker::ADD;
         marker.pose.orientation.w = 1.0;
-        marker.scale.x = 0.3;  // Sphere diameter
-        marker.scale.y = 0.3;
-        marker.scale.z = 0.3;
+        marker.scale.x = 0.2;  // Sphere diameter (smaller for more points)
+        marker.scale.y = 0.2;
+        marker.scale.z = 0.2;
         marker.lifetime = rclcpp::Duration::from_seconds(0.5);  // Marker lifetime
 
         // 색상 설정
@@ -257,10 +269,15 @@ void AutonomousDriving::Run() {
         marker.color.a = 0.5;
 
         for (int i = 0; i < num_points; ++i) {
-            double x_vehicle = x_start + i * x_step;
+            double x_vehicle = sample_x_start + i * x_step;
             double y_vehicle = poly_lane.a0 + poly_lane.a1 * x_vehicle
                              + poly_lane.a2 * x_vehicle * x_vehicle
                              + poly_lane.a3 * x_vehicle * x_vehicle * x_vehicle;
+
+            // NaN/Inf 체크
+            if (!std::isfinite(y_vehicle)) {
+                continue;
+            }
 
             geometry_msgs::msg::Point p;
             p.x = x_vehicle;
@@ -273,34 +290,105 @@ void AutonomousDriving::Run() {
         marker_array.markers.push_back(marker);
     }
 
-    // Driveway 정보 TEXT 마커 추가
+    p_lane_sample_points_->publish(marker_array);
+
+    // ===== Lane Info TEXT 마커 (별도 토픽) =====
+    visualization_msgs::msg::MarkerArray text_marker_array;
+    int text_marker_id = 0;
+
+    // Driveway 정보 TEXT 마커
     visualization_msgs::msg::Marker driveway_text;
     driveway_text.header.frame_id = lane_points.frame_id.empty() ? "vehicle" : lane_points.frame_id;
     driveway_text.header.stamp = current_time;
     driveway_text.ns = "driveway_info";
-    driveway_text.id = marker_id++;
+    driveway_text.id = text_marker_id++;
     driveway_text.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
     driveway_text.action = visualization_msgs::msg::Marker::ADD;
-    
+
     driveway_text.pose.position.x = 5.0;
     driveway_text.pose.position.y = 0.0;
     driveway_text.pose.position.z = 3.0;
     driveway_text.pose.orientation.w = 1.0;
-    
+
     driveway_text.scale.z = 1.0;  // Text height
     driveway_text.color.r = 1.0;
     driveway_text.color.g = 1.0;
     driveway_text.color.b = 0.0;
     driveway_text.color.a = 1.0;
-    
-    // lane_processor_에서 current_driveway 가져오기
+
     int current_driveway = lane_processor_.GetCurrentDriveway();
     driveway_text.text = "Current Driveway: " + std::to_string(current_driveway);
     driveway_text.lifetime = rclcpp::Duration::from_seconds(0.5);
-    
-    marker_array.markers.push_back(driveway_text);
 
-    p_lane_sample_points_->publish(marker_array);
+    text_marker_array.markers.push_back(driveway_text);
+
+    // 유효한 클러스터 정보 TEXT 마커
+    visualization_msgs::msg::Marker cluster_text;
+    cluster_text.header.frame_id = lane_points.frame_id.empty() ? "vehicle" : lane_points.frame_id;
+    cluster_text.header.stamp = current_time;
+    cluster_text.ns = "cluster_info";
+    cluster_text.id = text_marker_id++;
+    cluster_text.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+    cluster_text.action = visualization_msgs::msg::Marker::ADD;
+
+    cluster_text.pose.position.x = 5.0;
+    cluster_text.pose.position.y = 0.0;
+    cluster_text.pose.position.z = 4.5;
+    cluster_text.pose.orientation.w = 1.0;
+
+    cluster_text.scale.z = 0.8;
+    cluster_text.color.r = 0.0;
+    cluster_text.color.g = 1.0;
+    cluster_text.color.b = 1.0;
+    cluster_text.color.a = 1.0;
+
+    int valid_count = lane_processor_.GetValidClusterCount();
+    std::string lane1_status = lane_processor_.IsLane1Valid() ? "O" : "X";
+    std::string lane2_status = lane_processor_.IsLane2Valid() ? "O" : "X";
+    std::string lane3_status = lane_processor_.IsLane3Valid() ? "O" : "X";
+    std::string lane4_status = lane_processor_.IsLane4Valid() ? "O" : "X";
+
+    cluster_text.text = "Valid Clusters: " + std::to_string(valid_count) + "/4\n"
+                      + "L1:" + lane1_status + " L2:" + lane2_status
+                      + " L3:" + lane3_status + " L4:" + lane4_status;
+    cluster_text.lifetime = rclcpp::Duration::from_seconds(0.5);
+
+    text_marker_array.markers.push_back(cluster_text);
+
+    // 각 레인별 포인트 수 TEXT 마커
+    visualization_msgs::msg::Marker points_count_text;
+    points_count_text.header.frame_id = lane_points.frame_id.empty() ? "vehicle" : lane_points.frame_id;
+    points_count_text.header.stamp = current_time;
+    points_count_text.ns = "points_count_info";
+    points_count_text.id = text_marker_id++;
+    points_count_text.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+    points_count_text.action = visualization_msgs::msg::Marker::ADD;
+
+    points_count_text.pose.position.x = 5.0;
+    points_count_text.pose.position.y = 0.0;
+    points_count_text.pose.position.z = 5.5;
+    points_count_text.pose.orientation.w = 1.0;
+
+    points_count_text.scale.z = 0.6;
+    points_count_text.color.r = 1.0;
+    points_count_text.color.g = 1.0;
+    points_count_text.color.b = 1.0;
+    points_count_text.color.a = 1.0;
+
+    size_t lane1_pts = lane_processor_.GetLane1Points().size();
+    size_t lane2_pts = lane_processor_.GetLane2Points().size();
+    size_t lane3_pts = lane_processor_.GetLane3Points().size();
+    size_t lane4_pts = lane_processor_.GetLane4Points().size();
+
+    points_count_text.text = "Points: L1=" + std::to_string(lane1_pts)
+                           + " L2=" + std::to_string(lane2_pts)
+                           + " L3=" + std::to_string(lane3_pts)
+                           + " L4=" + std::to_string(lane4_pts);
+    points_count_text.lifetime = rclcpp::Duration::from_seconds(0.5);
+
+    text_marker_array.markers.push_back(points_count_text);
+
+    p_lane_info_text_->publish(text_marker_array);
 
     // Visualize points memory in vehicle frame
     visualization_msgs::msg::MarkerArray points_memory_array;

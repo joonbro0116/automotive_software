@@ -83,6 +83,10 @@ LaneProcessor::LaneProcessor()
       lane2_is_generated_(false),
       lane3_is_generated_(false),
       lane4_is_generated_(false),
+      lane1_is_primary_(false),   // Primary lane 여부 (매 프레임 갱신)
+      lane2_is_primary_(false),
+      lane3_is_primary_(false),
+      lane4_is_primary_(false),
       tracking_state_(LaneTrackingState::INIT),
       virtual_left_valid_(false),
       virtual_right_valid_(false),
@@ -90,7 +94,10 @@ LaneProcessor::LaneProcessor()
       recovery_stable_count_(0),
       consecutive_soft_error_frames_(0),
       consecutive_fatal_error_frames_(0),
-      last_hard_reset_time_(-1e9)  // 초기값: 매우 과거 시점 (쿨다운 무시)
+      last_hard_reset_time_(-1e9),  // 초기값: 매우 과거 시점 (쿨다운 무시)
+      hard_reset_active_(false),
+      driveway_change_candidate_id_(2),
+      driveway_change_candidate_count_(0)
 {
     // Lane ID 설정
     lane1_polyfit_.id = "lane1";
@@ -476,6 +483,11 @@ interface::PolyfitLanes LaneProcessor::ProcessRecoveryMode(
         std::cout << "[LaneProcessor] State transition: RECOVERY -> NORMAL"
                   << std::endl;
 
+        // HardReset 락 해제 및 에러 카운터 리셋
+        hard_reset_active_ = false;
+        consecutive_soft_error_frames_ = 0;
+        consecutive_fatal_error_frames_ = 0;
+
         // RECOVERY 버퍼 초기화
         recovery_left_points_.clear();
         recovery_right_points_.clear();
@@ -525,10 +537,17 @@ interface::PolyfitLanes LaneProcessor::ProcessRecoveryMode(
 void LaneProcessor::ApplyEgoMotionCompensation(
     const interface::VehicleState& current_state) {
 
+    // 실측 포인트 compensation
     CompensateLanePoints(lane1_points_, prev_vehicle_state_, current_state);
     CompensateLanePoints(lane2_points_, prev_vehicle_state_, current_state);
     CompensateLanePoints(lane3_points_, prev_vehicle_state_, current_state);
     CompensateLanePoints(lane4_points_, prev_vehicle_state_, current_state);
+
+    // 샘플 포인트 compensation
+    CompensateLanePoints(lane1_sample_points_, prev_vehicle_state_, current_state);
+    CompensateLanePoints(lane2_sample_points_, prev_vehicle_state_, current_state);
+    CompensateLanePoints(lane3_sample_points_, prev_vehicle_state_, current_state);
+    CompensateLanePoints(lane4_sample_points_, prev_vehicle_state_, current_state);
 }
 
 /**
@@ -972,8 +991,6 @@ void LaneProcessor::UpdatePolyfitsFromMemoryOnly() {
 void LaneProcessor::FitLanePolynomials(
     const interface::VehicleState& vehicle_state) {
 
-    (void)vehicle_state;  // Unused parameter
-
     // -------------------------------------------------------------------------
     // Step 1: 이전 polyfit 저장 (롤백 가능성 대비)
     // -------------------------------------------------------------------------
@@ -1021,196 +1038,293 @@ void LaneProcessor::FitLanePolynomials(
     }
 
     // -------------------------------------------------------------------------
-    // Step 3: Driveway 판단 (3프레임 이후)
-    //         이전 값 저장 후 새 driveway 계산
+    // Step 3: Primary lane 선정 (피팅의 핵심)
+    //         신뢰 가능한 클러스터(포인트 >= RELIABLE_CLUSTER_MIN_POINTS) 중
+    //         x_max가 가장 큰 두 개를 primary로 선택
+    //         Primary는 Driveway와 무관하게 실측 피팅됨
     // -------------------------------------------------------------------------
-    const int saved_previous_driveway = current_driveway_;
-    DetermineCurrentDriveway();
-    const bool driveway_changed = (saved_previous_driveway != current_driveway_);
 
-    // -------------------------------------------------------------------------
-    // Step 4: 현재 driveway 기준으로 inner/outer lane 결정 후 피팅
-    //         inner lane: ego 주변 두 개 레인 (실측 기반)
-    //         outer lane: 나머지 두 개 레인 (실측 또는 외분)
-    // -------------------------------------------------------------------------
-    bool lane1_has_real_points = false;
-    bool lane2_has_real_points = false;
-    bool lane3_has_real_points = false;
-    bool lane4_has_real_points = false;
+    // 각 lane의 신뢰도 및 x_max 계산
+    struct LaneCandidate {
+        int lane_id;
+        double x_max;
+        bool is_reliable;
+    };
 
-    if (current_driveway_ == 1) {
-        // inner: lane1, lane2 / outer: lane3, lane4
-        FitSingleLane(lane1_points_, lane1_polyfit_, lane1_has_real_points, driveway_changed);
-        FitSingleLane(lane2_points_, lane2_polyfit_, lane2_has_real_points, driveway_changed);
-        FitSingleLane(lane3_points_, lane3_polyfit_, lane3_has_real_points, false);
-        FitSingleLane(lane4_points_, lane4_polyfit_, lane4_has_real_points, false);
+    LaneCandidate candidates[4];
 
-    } else if (current_driveway_ == 2) {
-        // inner: lane2, lane3 / outer: lane1, lane4
-        FitSingleLane(lane1_points_, lane1_polyfit_, lane1_has_real_points, false);
-        FitSingleLane(lane2_points_, lane2_polyfit_, lane2_has_real_points, driveway_changed);
-        FitSingleLane(lane3_points_, lane3_polyfit_, lane3_has_real_points, driveway_changed);
-        FitSingleLane(lane4_points_, lane4_polyfit_, lane4_has_real_points, false);
+    // lane1
+    candidates[0].lane_id = 1;
+    candidates[0].is_reliable = (lane1_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS);
+    candidates[0].x_max = -std::numeric_limits<double>::max();
+    if (!lane1_points_.empty()) {
+        for (const auto& pt : lane1_points_) {
+            if (pt.x > candidates[0].x_max) {
+                candidates[0].x_max = pt.x;
+            }
+        }
+    }
 
-    } else if (current_driveway_ == 3) {
-        // inner: lane3, lane4 / outer: lane1, lane2
-        FitSingleLane(lane1_points_, lane1_polyfit_, lane1_has_real_points, false);
-        FitSingleLane(lane2_points_, lane2_polyfit_, lane2_has_real_points, false);
-        FitSingleLane(lane3_points_, lane3_polyfit_, lane3_has_real_points, driveway_changed);
-        FitSingleLane(lane4_points_, lane4_polyfit_, lane4_has_real_points, driveway_changed);
+    // lane2
+    candidates[1].lane_id = 2;
+    candidates[1].is_reliable = (lane2_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS);
+    candidates[1].x_max = -std::numeric_limits<double>::max();
+    if (!lane2_points_.empty()) {
+        for (const auto& pt : lane2_points_) {
+            if (pt.x > candidates[1].x_max) {
+                candidates[1].x_max = pt.x;
+            }
+        }
+    }
+
+    // lane3
+    candidates[2].lane_id = 3;
+    candidates[2].is_reliable = (lane3_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS);
+    candidates[2].x_max = -std::numeric_limits<double>::max();
+    if (!lane3_points_.empty()) {
+        for (const auto& pt : lane3_points_) {
+            if (pt.x > candidates[2].x_max) {
+                candidates[2].x_max = pt.x;
+            }
+        }
+    }
+
+    // lane4
+    candidates[3].lane_id = 4;
+    candidates[3].is_reliable = (lane4_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS);
+    candidates[3].x_max = -std::numeric_limits<double>::max();
+    if (!lane4_points_.empty()) {
+        for (const auto& pt : lane4_points_) {
+            if (pt.x > candidates[3].x_max) {
+                candidates[3].x_max = pt.x;
+            }
+        }
+    }
+
+    // 신뢰 가능한 후보들을 x_max 기준 내림차순으로 정렬하여 상위 2개 선택
+    int primary_lane_ids[2] = {-1, -1};
+    int primary_count = 0;
+
+    for (int select_idx = 0; select_idx < 2; ++select_idx) {
+        int best_idx = -1;
+        double best_x_max = -std::numeric_limits<double>::max();
+
+        for (int i = 0; i < 4; ++i) {
+            if (!candidates[i].is_reliable) {
+                continue;
+            }
+
+            // 이미 선택된 것인지 체크
+            bool already_selected = false;
+            for (int j = 0; j < select_idx; ++j) {
+                if (primary_lane_ids[j] == candidates[i].lane_id) {
+                    already_selected = true;
+                    break;
+                }
+            }
+            if (already_selected) {
+                continue;
+            }
+
+            if (candidates[i].x_max > best_x_max) {
+                best_x_max = candidates[i].x_max;
+                best_idx = i;
+            }
+        }
+
+        if (best_idx >= 0) {
+            primary_lane_ids[primary_count] = candidates[best_idx].lane_id;
+            primary_count++;
+        }
+    }
+
+    // Primary 플래그 설정
+    lane1_is_primary_ = false;
+    lane2_is_primary_ = false;
+    lane3_is_primary_ = false;
+    lane4_is_primary_ = false;
+
+    for (int i = 0; i < primary_count; ++i) {
+        if (primary_lane_ids[i] == 1) {
+            lane1_is_primary_ = true;
+        } else if (primary_lane_ids[i] == 2) {
+            lane2_is_primary_ = true;
+        } else if (primary_lane_ids[i] == 3) {
+            lane3_is_primary_ = true;
+        } else if (primary_lane_ids[i] == 4) {
+            lane4_is_primary_ = true;
+        }
     }
 
     // -------------------------------------------------------------------------
-    // Step 5: Driveway 변경 시 outer lane 포인트 메모리 정리
+    // Step 4: Primary lane 피팅
+    //         Primary로 선정된 2개 레인은 무조건 실측 피팅
+    //         FitPrimaryLaneWithMemoryAndSamples 사용
     // -------------------------------------------------------------------------
-    prev_driveway_ = saved_previous_driveway;
-    RebuildOuterLanesOnDrivewayChange();  // 포인트 메모리 정리 + 로그 출력
-    prev_driveway_ = current_driveway_;   // 다음 프레임을 위해 업데이트
+    if (lane1_is_primary_) {
+        FitPrimaryLaneWithMemoryAndSamples(lane1_points_, lane1_sample_points_,
+                                           lane1_polyfit_, vehicle_state);
+        lane1_is_generated_ = false;
+    }
+
+    if (lane2_is_primary_) {
+        FitPrimaryLaneWithMemoryAndSamples(lane2_points_, lane2_sample_points_,
+                                           lane2_polyfit_, vehicle_state);
+        lane2_is_generated_ = false;
+    }
+
+    if (lane3_is_primary_) {
+        FitPrimaryLaneWithMemoryAndSamples(lane3_points_, lane3_sample_points_,
+                                           lane3_polyfit_, vehicle_state);
+        lane3_is_generated_ = false;
+    }
+
+    if (lane4_is_primary_) {
+        FitPrimaryLaneWithMemoryAndSamples(lane4_points_, lane4_sample_points_,
+                                           lane4_polyfit_, vehicle_state);
+        lane4_is_generated_ = false;
+    }
 
     // -------------------------------------------------------------------------
-    // Step 6: Outer lane 처리
-    //         - 실측 포인트가 충분하면 FitSingleLane 결과 유지
-    //         - 실측 포인트가 부족하면 외분으로 재생성
-    //
-    // Outer lane 유효성 판단 기준:
-    //   OUTER_LANE_MIN_POINTS: 최소 10개 포인트 필요
-    //   OUTER_LANE_MIN_X_RANGE: 최소 5m의 X 범위 필요
+    // Step 5: Non-Primary lane 외분 생성
+    //         Primary 2개의 조합에 따라 외분 방식 결정
+    //         (Primary가 2개 미만인 경우는 fallback 처리)
     // -------------------------------------------------------------------------
-    static constexpr size_t OUTER_LANE_MIN_POINTS = 10;
-    static constexpr double OUTER_LANE_MIN_X_RANGE = 5.0;  // [m]
 
-    double outer_x_min = 0.0;
-    double outer_x_max = 0.0;
+    // Primary lane ID를 정렬하여 조합 식별 (작은 ID가 앞에)
+    int p1 = primary_lane_ids[0];
+    int p2 = primary_lane_ids[1];
+    if (p1 > p2) {
+        int temp = p1;
+        p1 = p2;
+        p2 = temp;
+    }
 
-    if (current_driveway_ == 1) {
-        // ---------------------------------------------------------------------
-        // Driveway 1: inner = [lane1, lane2], outer = [lane3, lane4]
-        // ---------------------------------------------------------------------
-
-        // lane3 처리
-        const double lane3_x_range = ComputeXRange(lane3_points_, outer_x_min, outer_x_max);
-        const bool lane3_has_enough_points = (lane3_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane3_has_enough_range = (lane3_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane3_use_measured = lane3_has_enough_points && lane3_has_enough_range;
-
-        if (lane3_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane3_polyfit_.id = "lane3";
-            lane3_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
+    // Primary가 2개인 경우 외분 생성
+    if (primary_count == 2) {
+        if (p1 == 1 && p2 == 2) {
+            // Primary = lane1, lane2 → outer = lane3, lane4
+            // lane3: 1:1 외분 (lane2 기준, lane1 참조)
             ExtrapolateLane(lane2_polyfit_, lane1_polyfit_, lane3_polyfit_);
+            lane3_polyfit_.id = "lane3";
+            lane3_is_generated_ = true;
+
+            // lane4: 2:1 외분 (lane2 기준, lane1 참조)
+            ExtrapolateLane2(lane2_polyfit_, lane1_polyfit_, lane4_polyfit_);
+            lane4_polyfit_.id = "lane4";
+            lane4_is_generated_ = true;
+
+        } else if (p1 == 2 && p2 == 3) {
+            // Primary = lane2, lane3 → outer = lane1, lane4
+            // lane1: 1:1 외분 (lane2 기준, lane3 참조)
+            ExtrapolateLane(lane2_polyfit_, lane3_polyfit_, lane1_polyfit_);
+            lane1_polyfit_.id = "lane1";
+            lane1_is_generated_ = true;
+
+            // lane4: 1:1 외분 (lane3 기준, lane2 참조)
+            ExtrapolateLane(lane3_polyfit_, lane2_polyfit_, lane4_polyfit_);
+            lane4_polyfit_.id = "lane4";
+            lane4_is_generated_ = true;
+
+        } else if (p1 == 3 && p2 == 4) {
+            // Primary = lane3, lane4 → outer = lane1, lane2
+            // lane2: 1:1 외분 (lane3 기준, lane4 참조)
+            ExtrapolateLane(lane3_polyfit_, lane4_polyfit_, lane2_polyfit_);
+            lane2_polyfit_.id = "lane2";
+            lane2_is_generated_ = true;
+
+            // lane1: 2:1 외분 (lane3 기준, lane4 참조)
+            ExtrapolateLane2(lane3_polyfit_, lane4_polyfit_, lane1_polyfit_);
+            lane1_polyfit_.id = "lane1";
+            lane1_is_generated_ = true;
+
+        } else if (p1 == 1 && p2 == 3) {
+            // Edge case: Primary = lane1, lane3 (비인접)
+            // lane2: lane1과 lane3의 평균 (내분)
+            lane2_polyfit_.a0 = (lane1_polyfit_.a0 + lane3_polyfit_.a0) / 2.0;
+            lane2_polyfit_.a1 = (lane1_polyfit_.a1 + lane3_polyfit_.a1) / 2.0;
+            lane2_polyfit_.a2 = (lane1_polyfit_.a2 + lane3_polyfit_.a2) / 2.0;
+            lane2_polyfit_.a3 = (lane1_polyfit_.a3 + lane3_polyfit_.a3) / 2.0;
+            lane2_polyfit_.x_start = std::max(lane1_polyfit_.x_start, lane3_polyfit_.x_start);
+            lane2_polyfit_.x_end = std::min(lane1_polyfit_.x_end, lane3_polyfit_.x_end);
+            lane2_polyfit_.id = "lane2";
+            lane2_is_generated_ = true;
+
+            // lane4: 1:1 외분 (lane3 기준, lane1 참조)
+            ExtrapolateLane(lane3_polyfit_, lane1_polyfit_, lane4_polyfit_);
+            lane4_polyfit_.id = "lane4";
+            lane4_is_generated_ = true;
+
+        } else if (p1 == 2 && p2 == 4) {
+            // Edge case: Primary = lane2, lane4 (비인접)
+            // lane1: 1:1 외분 (lane2 기준, lane4 참조)
+            ExtrapolateLane(lane2_polyfit_, lane4_polyfit_, lane1_polyfit_);
+            lane1_polyfit_.id = "lane1";
+            lane1_is_generated_ = true;
+
+            // lane3: lane2와 lane4의 평균 (내분)
+            lane3_polyfit_.a0 = (lane2_polyfit_.a0 + lane4_polyfit_.a0) / 2.0;
+            lane3_polyfit_.a1 = (lane2_polyfit_.a1 + lane4_polyfit_.a1) / 2.0;
+            lane3_polyfit_.a2 = (lane2_polyfit_.a2 + lane4_polyfit_.a2) / 2.0;
+            lane3_polyfit_.a3 = (lane2_polyfit_.a3 + lane4_polyfit_.a3) / 2.0;
+            lane3_polyfit_.x_start = std::max(lane2_polyfit_.x_start, lane4_polyfit_.x_start);
+            lane3_polyfit_.x_end = std::min(lane2_polyfit_.x_end, lane4_polyfit_.x_end);
+            lane3_polyfit_.id = "lane3";
+            lane3_is_generated_ = true;
+
+        } else if (p1 == 1 && p2 == 4) {
+            // Edge case: Primary = lane1, lane4 (가장 먼 조합)
+            // lane2, lane3: 1/3, 2/3 내분
+            lane2_polyfit_.a0 = lane1_polyfit_.a0 * 2.0/3.0 + lane4_polyfit_.a0 * 1.0/3.0;
+            lane2_polyfit_.a1 = lane1_polyfit_.a1 * 2.0/3.0 + lane4_polyfit_.a1 * 1.0/3.0;
+            lane2_polyfit_.a2 = lane1_polyfit_.a2 * 2.0/3.0 + lane4_polyfit_.a2 * 1.0/3.0;
+            lane2_polyfit_.a3 = lane1_polyfit_.a3 * 2.0/3.0 + lane4_polyfit_.a3 * 1.0/3.0;
+            lane2_polyfit_.x_start = std::max(lane1_polyfit_.x_start, lane4_polyfit_.x_start);
+            lane2_polyfit_.x_end = std::min(lane1_polyfit_.x_end, lane4_polyfit_.x_end);
+            lane2_polyfit_.id = "lane2";
+            lane2_is_generated_ = true;
+
+            lane3_polyfit_.a0 = lane1_polyfit_.a0 * 1.0/3.0 + lane4_polyfit_.a0 * 2.0/3.0;
+            lane3_polyfit_.a1 = lane1_polyfit_.a1 * 1.0/3.0 + lane4_polyfit_.a1 * 2.0/3.0;
+            lane3_polyfit_.a2 = lane1_polyfit_.a2 * 1.0/3.0 + lane4_polyfit_.a2 * 2.0/3.0;
+            lane3_polyfit_.a3 = lane1_polyfit_.a3 * 1.0/3.0 + lane4_polyfit_.a3 * 2.0/3.0;
+            lane3_polyfit_.x_start = std::max(lane1_polyfit_.x_start, lane4_polyfit_.x_start);
+            lane3_polyfit_.x_end = std::min(lane1_polyfit_.x_end, lane4_polyfit_.x_end);
             lane3_polyfit_.id = "lane3";
             lane3_is_generated_ = true;
         }
 
-        // lane4 처리
-        const double lane4_x_range = ComputeXRange(lane4_points_, outer_x_min, outer_x_max);
-        const bool lane4_has_enough_points = (lane4_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane4_has_enough_range = (lane4_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane4_use_measured = lane4_has_enough_points && lane4_has_enough_range;
-
-        if (lane4_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane4_polyfit_.id = "lane4";
-            lane4_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
-            ExtrapolateLane2(lane2_polyfit_, lane1_polyfit_, lane4_polyfit_);
-            lane4_polyfit_.id = "lane4";
-            lane4_is_generated_ = true;
-        }
-
-        // inner lanes는 실측 피팅 결과 사용
-        lane1_is_generated_ = !lane1_has_real_points;
-        lane2_is_generated_ = !lane2_has_real_points;
-
-    } else if (current_driveway_ == 2) {
-        // ---------------------------------------------------------------------
-        // Driveway 2: inner = [lane2, lane3], outer = [lane1, lane4]
-        // ---------------------------------------------------------------------
-
-        // lane1 처리
-        const double lane1_x_range = ComputeXRange(lane1_points_, outer_x_min, outer_x_max);
-        const bool lane1_has_enough_points = (lane1_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane1_has_enough_range = (lane1_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane1_use_measured = lane1_has_enough_points && lane1_has_enough_range;
-
-        if (lane1_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane1_polyfit_.id = "lane1";
-            lane1_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
-            ExtrapolateLane(lane2_polyfit_, lane3_polyfit_, lane1_polyfit_);
-            lane1_polyfit_.id = "lane1";
+    } else if (primary_count == 1) {
+        // Fallback: Primary가 1개만 있는 경우
+        // 이전 polyfit 유지 또는 단일 primary 기반으로 다른 레인 추정
+        // 여기서는 이전 polyfit을 유지하고 generated 플래그만 설정
+        if (!lane1_is_primary_) {
             lane1_is_generated_ = true;
         }
-
-        // lane4 처리
-        const double lane4_x_range = ComputeXRange(lane4_points_, outer_x_min, outer_x_max);
-        const bool lane4_has_enough_points = (lane4_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane4_has_enough_range = (lane4_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane4_use_measured = lane4_has_enough_points && lane4_has_enough_range;
-
-        if (lane4_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane4_polyfit_.id = "lane4";
-            lane4_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
-            ExtrapolateLane(lane3_polyfit_, lane2_polyfit_, lane4_polyfit_);
-            lane4_polyfit_.id = "lane4";
-            lane4_is_generated_ = true;
-        }
-
-        // inner lanes는 실측 피팅 결과 사용
-        lane2_is_generated_ = !lane2_has_real_points;
-        lane3_is_generated_ = !lane3_has_real_points;
-
-    } else if (current_driveway_ == 3) {
-        // ---------------------------------------------------------------------
-        // Driveway 3: inner = [lane3, lane4], outer = [lane1, lane2]
-        // ---------------------------------------------------------------------
-
-        // lane2 처리
-        const double lane2_x_range = ComputeXRange(lane2_points_, outer_x_min, outer_x_max);
-        const bool lane2_has_enough_points = (lane2_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane2_has_enough_range = (lane2_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane2_use_measured = lane2_has_enough_points && lane2_has_enough_range;
-
-        if (lane2_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane2_polyfit_.id = "lane2";
-            lane2_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
-            ExtrapolateLane(lane3_polyfit_, lane4_polyfit_, lane2_polyfit_);
-            lane2_polyfit_.id = "lane2";
+        if (!lane2_is_primary_) {
             lane2_is_generated_ = true;
         }
-
-        // lane1 처리
-        const double lane1_x_range = ComputeXRange(lane1_points_, outer_x_min, outer_x_max);
-        const bool lane1_has_enough_points = (lane1_points_.size() >= OUTER_LANE_MIN_POINTS);
-        const bool lane1_has_enough_range = (lane1_x_range >= OUTER_LANE_MIN_X_RANGE);
-        const bool lane1_use_measured = lane1_has_enough_points && lane1_has_enough_range;
-
-        if (lane1_use_measured) {
-            // 실측 포인트가 충분: FitSingleLane 결과 유지
-            lane1_polyfit_.id = "lane1";
-            lane1_is_generated_ = false;
-        } else {
-            // 실측 포인트 부족: 외분으로 재생성
-            ExtrapolateLane2(lane3_polyfit_, lane4_polyfit_, lane1_polyfit_);
-            lane1_polyfit_.id = "lane1";
-            lane1_is_generated_ = true;
+        if (!lane3_is_primary_) {
+            lane3_is_generated_ = true;
+        }
+        if (!lane4_is_primary_) {
+            lane4_is_generated_ = true;
         }
 
-        // inner lanes는 실측 피팅 결과 사용
-        lane3_is_generated_ = !lane3_has_real_points;
-        lane4_is_generated_ = !lane4_has_real_points;
+    } else {
+        // Fallback: Primary가 0개인 경우 (신뢰할 수 있는 레인 없음)
+        // 이전 polyfit 유지
+        lane1_is_generated_ = true;
+        lane2_is_generated_ = true;
+        lane3_is_generated_ = true;
+        lane4_is_generated_ = true;
     }
+
+    // -------------------------------------------------------------------------
+    // Step 6: Driveway 판단 (피팅 완료 후)
+    //         ego_center_lane 생성을 위해서만 사용
+    // -------------------------------------------------------------------------
+    DetermineCurrentDriveway();
 
     // -------------------------------------------------------------------------
     // Step 7: Lane ordering 체크 (warning만 출력)
@@ -1290,6 +1404,11 @@ bool LaneProcessor::EnforceLaneOrdering() {
  * Cooldown: HARD_RESET_COOLDOWN_SEC(=1.0초) 이내 재리셋 방지
  */
 bool LaneProcessor::HasLaneDetectionError() {
+    // HardReset active 상태에서는 추가 HardReset 금지
+    if (hard_reset_active_) {
+        return false;
+    }
+
     bool soft_error_detected = false;
     bool fatal_error_detected = false;
 
@@ -1467,6 +1586,9 @@ bool LaneProcessor::HasLaneDetectionError() {
 void LaneProcessor::HardReset() {
     std::cout << "[LaneProcessor] === HardReset called ===" << std::endl;
 
+    // HardReset 락 활성화 (NORMAL 복귀 전까지 재진입 방지)
+    hard_reset_active_ = true;
+
     // -------------------------------------------------------------------------
     // Step 1: Lane 포인트 메모리 초기화
     // -------------------------------------------------------------------------
@@ -1479,6 +1601,12 @@ void LaneProcessor::HardReset() {
     prev_lane2_points_.clear();
     prev_lane3_points_.clear();
     prev_lane4_points_.clear();
+
+    // 샘플 포인트 메모리 초기화
+    lane1_sample_points_.clear();
+    lane2_sample_points_.clear();
+    lane3_sample_points_.clear();
+    lane4_sample_points_.clear();
 
     // -------------------------------------------------------------------------
     // Step 2: Polyfit 초기화 (기본 생성자로 리셋)
@@ -1502,6 +1630,14 @@ void LaneProcessor::HardReset() {
     lane2_is_generated_ = false;
     lane3_is_generated_ = false;
     lane4_is_generated_ = false;
+
+    // -------------------------------------------------------------------------
+    // Step 3-1: Primary 플래그 초기화
+    // -------------------------------------------------------------------------
+    lane1_is_primary_ = false;
+    lane2_is_primary_ = false;
+    lane3_is_primary_ = false;
+    lane4_is_primary_ = false;
 
     // -------------------------------------------------------------------------
     // Step 4: Driveway 초기화 (기본값 2로 리셋)
@@ -1557,6 +1693,8 @@ void LaneProcessor::HardReset() {
 void LaneProcessor::DetermineCurrentDriveway() {
     // 기준 x 위치: 차량 앞쪽 5m 지점에서 레인 구조 평가
     static constexpr double DRIVEWAY_EVALUATION_X = 5.0;
+    // 드라이브웨이 스위칭 안정 프레임 수 (히스테리시스)
+    static constexpr int DRIVEWAY_SWITCH_STABLE_FRAMES = 5;
 
     int best_driveway_id = current_driveway_;
     double best_center_distance = std::numeric_limits<double>::max();
@@ -1597,7 +1735,32 @@ void LaneProcessor::DetermineCurrentDriveway() {
         return;
     }
 
-    current_driveway_ = best_driveway_id;
+    // -------------------------------------------------------------------------
+    // 히스테리시스 적용: 여러 프레임 연속 후보가 유지될 때만 실제 변경
+    // -------------------------------------------------------------------------
+
+    // 1) best_driveway_id가 현재 driveway와 같으면, 변경 후보 초기화
+    if (best_driveway_id == current_driveway_) {
+        driveway_change_candidate_id_ = current_driveway_;
+        driveway_change_candidate_count_ = 0;
+        return;
+    }
+
+    // 2) best_driveway_id가 현재 후보와 같으면 카운트 증가,
+    //    다르면 새로운 후보로 리셋
+    if (best_driveway_id == driveway_change_candidate_id_) {
+        driveway_change_candidate_count_++;
+    } else {
+        driveway_change_candidate_id_ = best_driveway_id;
+        driveway_change_candidate_count_ = 1;
+    }
+
+    // 3) 같은 후보가 DRIVEWAY_SWITCH_STABLE_FRAMES 프레임 연속 나오면 실제로 변경
+    if (driveway_change_candidate_count_ >= DRIVEWAY_SWITCH_STABLE_FRAMES) {
+        prev_driveway_ = current_driveway_;
+        current_driveway_ = driveway_change_candidate_id_;
+        driveway_change_candidate_count_ = 0;
+    }
 }
 
 /**
@@ -1977,6 +2140,179 @@ bool LaneProcessor::FitCubicPolynomial(
     return true;
 }
 
+// ============================================================================
+// Primary Lane Fitting with Memory and Samples
+// ============================================================================
+
+/**
+ * @brief Fits a primary lane using memory + sample memory + new samples
+ *
+ * @param[in,out] lane_points Real points buffer (ego-motion compensated)
+ * @param[in,out] sample_points Sample points buffer (ego-motion compensated)
+ * @param[in,out] lane_polyfit Polynomial to update
+ * @param[in] vehicle_state Current vehicle state for coordinate transform
+ *
+ * @details
+ * Primary lane에 대해 다음 데이터를 사용하여 피팅:
+ *   1. 실측 메모리 포인트 (lane_points)
+ *   2. 샘플 메모리 포인트 (sample_points, ego-motion compensated)
+ *   3. 새로 생성한 샘플 (실측+샘플메모리 모두 없는 구간만)
+ *
+ * 샘플 메모리 관리:
+ *   - 실측 포인트가 있는 구간의 샘플은 제거
+ *   - 새 샘플 생성 시 샘플 메모리에 저장 (ego-motion compensation 대상)
+ *   - MAX_POINTS_PER_LANE 제한 적용
+ */
+void LaneProcessor::FitPrimaryLaneWithMemoryAndSamples(
+    std::vector<interface::Point2D>& lane_points,
+    std::vector<interface::Point2D>& sample_points,
+    interface::PolyfitLane& lane_polyfit,
+    const interface::VehicleState& vehicle_state) {
+
+    (void)vehicle_state;  // 샘플은 차량 좌표계로 저장, ego-motion compensation으로 일관성 유지
+
+    // -------------------------------------------------------------------------
+    // Step 1: 실측 포인트가 비어 있으면 아무 것도 하지 않음
+    // -------------------------------------------------------------------------
+    if (lane_points.empty()) {
+        return;
+    }
+
+    // -------------------------------------------------------------------------
+    // Step 2: 샘플 메모리에서 실측 포인트 구간 제거
+    //         실측 포인트 근처(GAP_THRESHOLD)에 있는 샘플은 삭제
+    // -------------------------------------------------------------------------
+    FilterSamplePointsByRealPoints(sample_points, lane_points);
+
+    // -------------------------------------------------------------------------
+    // Step 3: 이전 polyfit의 x 범위 결정
+    // -------------------------------------------------------------------------
+    double sample_x_start = lane_polyfit.x_start;
+    double sample_x_end = lane_polyfit.x_end;
+
+    const bool invalid_x_range = (sample_x_end <= sample_x_start);
+    if (invalid_x_range) {
+        sample_x_start = MEMORY_X_MIN;
+        sample_x_end = MEMORY_X_MAX;
+    }
+
+    // -------------------------------------------------------------------------
+    // Step 4: 새 샘플 포인트 생성 (실측 + 샘플메모리 모두 없는 구간만)
+    // -------------------------------------------------------------------------
+    std::vector<interface::Point2D> new_samples;
+    new_samples.reserve(PRIMARY_LANE_NUM_SAMPLES);
+
+    for (int i = 0; i < PRIMARY_LANE_NUM_SAMPLES; ++i) {
+        const double ratio = (PRIMARY_LANE_NUM_SAMPLES <= 1)
+            ? 0.0
+            : static_cast<double>(i) / static_cast<double>(PRIMARY_LANE_NUM_SAMPLES - 1);
+
+        const double sample_x = sample_x_start + ratio * (sample_x_end - sample_x_start);
+
+        // 실측 포인트 근처인지 검사
+        bool has_nearby_real = false;
+        for (const auto& pt : lane_points) {
+            if (std::fabs(pt.x - sample_x) < PRIMARY_LANE_GAP_THRESHOLD) {
+                has_nearby_real = true;
+                break;
+            }
+        }
+
+        // 샘플 메모리 근처인지 검사
+        bool has_nearby_sample = false;
+        for (const auto& pt : sample_points) {
+            if (std::fabs(pt.x - sample_x) < PRIMARY_LANE_GAP_THRESHOLD) {
+                has_nearby_sample = true;
+                break;
+            }
+        }
+
+        // 실측/샘플 모두 없는 구간에만 새 샘플 생성
+        if (!has_nearby_real && !has_nearby_sample) {
+            const double sample_y = EvaluatePolynomial(lane_polyfit, sample_x);
+
+            if (std::isfinite(sample_y)) {
+                interface::Point2D new_sample;
+                new_sample.x = sample_x;
+                new_sample.y = sample_y;
+                new_samples.push_back(new_sample);
+            }
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Step 5: 새 샘플을 샘플 메모리에 저장 (차량 좌표계 그대로)
+    //         ego-motion compensation이 적용되므로 다음 프레임에도 유효
+    // -------------------------------------------------------------------------
+    for (const auto& pt : new_samples) {
+        sample_points.push_back(pt);
+    }
+
+    // 샘플 메모리 크기 제한 적용
+    if (sample_points.size() > MAX_POINTS_PER_LANE) {
+        DownsampleSingleLane(sample_points);
+    }
+
+    // X 범위 필터링 (너무 뒤로 간 샘플 제거)
+    FilterPointsByXRange(sample_points);
+
+    // -------------------------------------------------------------------------
+    // Step 6: combined_points 구성 (실측 + 샘플 메모리)
+    // -------------------------------------------------------------------------
+    std::vector<interface::Point2D> combined_points;
+    combined_points.reserve(lane_points.size() + sample_points.size());
+
+    for (const auto& pt : lane_points) {
+        combined_points.push_back(pt);
+    }
+
+    for (const auto& pt : sample_points) {
+        combined_points.push_back(pt);
+    }
+
+    // -------------------------------------------------------------------------
+    // Step 7: 피팅 수행
+    // -------------------------------------------------------------------------
+    FitCubicPolynomial(combined_points, lane_polyfit);
+}
+
+/**
+ * @brief 샘플 포인트 메모리에서 실측 포인트 구간의 샘플 제거
+ *
+ * @param[in,out] sample_points 샘플 포인트 메모리 (수정됨)
+ * @param[in] real_points 실측 포인트 (참조용)
+ *
+ * @details
+ * 실측 포인트 근처(PRIMARY_LANE_GAP_THRESHOLD 이내)에 있는
+ * 샘플 포인트를 제거하여 실측 데이터 우선을 보장
+ */
+void LaneProcessor::FilterSamplePointsByRealPoints(
+    std::vector<interface::Point2D>& sample_points,
+    const std::vector<interface::Point2D>& real_points) {
+
+    if (sample_points.empty() || real_points.empty()) {
+        return;
+    }
+
+    std::vector<interface::Point2D> filtered;
+    filtered.reserve(sample_points.size());
+
+    for (const auto& sample : sample_points) {
+        bool near_real = false;
+        for (const auto& real : real_points) {
+            if (std::fabs(sample.x - real.x) < PRIMARY_LANE_GAP_THRESHOLD) {
+                near_real = true;
+                break;
+            }
+        }
+        if (!near_real) {
+            filtered.push_back(sample);
+        }
+    }
+
+    sample_points = std::move(filtered);
+}
+
 /**
  * @brief Fits a single lane with reliability check
  *
@@ -2322,6 +2658,56 @@ const interface::PolyfitLane& LaneProcessor::GetEgoLane() const {
  */
 int LaneProcessor::GetCurrentDriveway() const {
     return current_driveway_;
+}
+
+/**
+ * @brief Returns count of valid lane clusters
+ *
+ * A cluster is considered valid if it has at least RELIABLE_CLUSTER_MIN_POINTS points
+ */
+int LaneProcessor::GetValidClusterCount() const {
+    int count = 0;
+    if (lane1_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS) {
+        count++;
+    }
+    if (lane2_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS) {
+        count++;
+    }
+    if (lane3_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS) {
+        count++;
+    }
+    if (lane4_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS) {
+        count++;
+    }
+    return count;
+}
+
+/**
+ * @brief Returns whether lane1 has enough points to be valid
+ */
+bool LaneProcessor::IsLane1Valid() const {
+    return lane1_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS;
+}
+
+/**
+ * @brief Returns whether lane2 has enough points to be valid
+ */
+bool LaneProcessor::IsLane2Valid() const {
+    return lane2_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS;
+}
+
+/**
+ * @brief Returns whether lane3 has enough points to be valid
+ */
+bool LaneProcessor::IsLane3Valid() const {
+    return lane3_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS;
+}
+
+/**
+ * @brief Returns whether lane4 has enough points to be valid
+ */
+bool LaneProcessor::IsLane4Valid() const {
+    return lane4_points_.size() >= RELIABLE_CLUSTER_MIN_POINTS;
 }
 
 // ============================================================================

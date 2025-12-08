@@ -113,6 +113,7 @@ class AutonomousDriving : public rclcpp::Node {
         rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr  p_points_memory_;
         rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr  p_polyfit_lanes_marker_;
         rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr  p_driving_way_marker_;
+        rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr  p_lane_info_text_;
         
         // Timer
         rclcpp::TimerBase::SharedPtr t_run_node_;

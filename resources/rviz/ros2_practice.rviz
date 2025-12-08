@@ -210,6 +210,42 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /ego/driving_way_marker
           Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: LaneSamplePoints
+          Namespaces:
+            {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /ego/lane_sample_points
+          Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: PointsMemory
+          Namespaces:
+            {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /ego/points_memory
+          Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: LaneInfoText
+          Namespaces:
+            {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /ego/lane_info_text
+          Value: true
       Enabled: true
       Name: LaneMarker
     - Class: rviz_default_plugins/MarkerArray

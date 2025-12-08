@@ -43,6 +43,15 @@ public:
     // 각 레인당 최대 포인트 개수
     static constexpr size_t MAX_POINTS_PER_LANE = 100;
 
+    // Primary lane 선정을 위한 신뢰 기준: 최소 포인트 개수
+    static constexpr size_t RELIABLE_CLUSTER_MIN_POINTS = 10;
+
+    // Primary lane 피팅 시 이전 polyfit에서 생성할 샘플 개수
+    static constexpr int PRIMARY_LANE_NUM_SAMPLES = 80;
+
+    // Primary lane 피팅 시 실측 포인트가 존재하면 샘플 생성을 건너뛸 거리 임계값 [m]
+    static constexpr double PRIMARY_LANE_GAP_THRESHOLD = 0.5;
+
     LaneProcessor();
 
     interface::PolyfitLanes Process(const interface::Lane& input_lane_data,
@@ -61,6 +70,13 @@ public:
     const interface::PolyfitLane& GetEgoLane() const;
 
     int GetCurrentDriveway() const;
+
+    // 유효한 클러스터 정보 조회 (시각화용)
+    int GetValidClusterCount() const;  // 유효한 레인 클러스터 수 (포인트 >= RELIABLE_CLUSTER_MIN_POINTS)
+    bool IsLane1Valid() const;
+    bool IsLane2Valid() const;
+    bool IsLane3Valid() const;
+    bool IsLane4Valid() const;
 
     std::vector<geometry_msgs::msg::Point> getLane1PointsMemoryVehicleFrame(
         const interface::VehicleState& vehicle_state) const;
@@ -187,6 +203,18 @@ private:
         bool& has_real_points,
         bool relax_condition);
 
+    // Primary lane 피팅: 메모리 포인트 + 샘플 메모리 포인트 + 새 샘플(비어 있는 구간만)로 피팅
+    void FitPrimaryLaneWithMemoryAndSamples(
+        std::vector<interface::Point2D>& lane_points,
+        std::vector<interface::Point2D>& sample_points,
+        interface::PolyfitLane& lane_polyfit,
+        const interface::VehicleState& vehicle_state);
+
+    // 샘플 포인트 메모리 필터링 (실측 포인트가 있는 구간의 샘플 제거)
+    void FilterSamplePointsByRealPoints(
+        std::vector<interface::Point2D>& sample_points,
+        const std::vector<interface::Point2D>& real_points);
+
     // 이전 polyfit 샘플과 혼합하여 refit
     bool RefitWithSamples(
         const std::vector<interface::Point2D>& pts,
@@ -213,6 +241,12 @@ private:
     std::vector<interface::Point2D> lane3_points_;  // lane3 포인트들 - 차량 좌표계 (ego-motion compensated)
     std::vector<interface::Point2D> lane4_points_;  // lane4 포인트들 - 차량 좌표계 (ego-motion compensated)
 
+    // 샘플 포인트 메모리 (실측과 분리, ego-motion compensated)
+    std::vector<interface::Point2D> lane1_sample_points_;
+    std::vector<interface::Point2D> lane2_sample_points_;
+    std::vector<interface::Point2D> lane3_sample_points_;
+    std::vector<interface::Point2D> lane4_sample_points_;
+
     interface::PolyfitLane lane1_polyfit_;  // lane1 다항식
     interface::PolyfitLane lane2_polyfit_;  // lane2 다항식
     interface::PolyfitLane lane3_polyfit_;  // lane3 다항식
@@ -225,6 +259,13 @@ private:
     bool lane2_is_generated_;
     bool lane3_is_generated_;
     bool lane4_is_generated_;
+
+    // Primary lane 여부 (매 프레임 FitLanePolynomials에서 갱신)
+    // 신뢰 가능한 클러스터 중 x_max가 큰 상위 2개가 primary
+    bool lane1_is_primary_;
+    bool lane2_is_primary_;
+    bool lane3_is_primary_;
+    bool lane4_is_primary_;
 
     // 이전 polyfit 저장 (롤백용)
     interface::PolyfitLane prev_lane1_polyfit_;
@@ -259,6 +300,16 @@ private:
 
     /// 마지막 HardReset이 실행된 시각 (초, steady_clock 기준)
     double last_hard_reset_time_;
+
+    // ========== HardReset 락 ==========
+    // HardReset 이후 NORMAL 복귀 전까지 true (재진입 방지)
+    bool hard_reset_active_;
+
+    // ========== Driveway 히스테리시스 ==========
+    // 현재 변경 후보 driveway ID
+    int driveway_change_candidate_id_;
+    // 같은 후보가 연속으로 나온 프레임 수
+    int driveway_change_candidate_count_;
 };
 
 }  // namespace lane_processor
