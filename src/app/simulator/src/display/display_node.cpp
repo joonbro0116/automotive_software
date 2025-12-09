@@ -428,7 +428,8 @@ void Display::DisplayROILanes(const ad_msgs::msg::LanePointDataArray& roi_lanes,
 
     for (auto& lane : roi_lanes.lane) {
         visualization_msgs::msg::Marker marker;
-        marker.header.frame_id = lane.frame_id;
+        // 빈 frame_id인 경우 부모의 frame_id 사용
+        marker.header.frame_id = lane.frame_id.empty() ? roi_lanes.frame_id : lane.frame_id;
         marker.header.stamp = current_time;
 
         marker.ns = lane.id;

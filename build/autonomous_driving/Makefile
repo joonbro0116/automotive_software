@@ -198,65 +198,41 @@ autonomous_driving_uninstall/fast:
 .PHONY : autonomous_driving_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named autonomous_driving
+# Target rules for targets named lane_processor_node
 
 # Build rule for target.
-autonomous_driving: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 autonomous_driving
-.PHONY : autonomous_driving
+lane_processor_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lane_processor_node
+.PHONY : lane_processor_node
 
 # fast build rule for target.
-autonomous_driving/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/build
-.PHONY : autonomous_driving/fast
+lane_processor_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lane_processor_node.dir/build.make CMakeFiles/lane_processor_node.dir/build
+.PHONY : lane_processor_node/fast
 
-src/autonomous_driving_node.o: src/autonomous_driving_node.cpp.o
-.PHONY : src/autonomous_driving_node.o
-
-# target to build an object file
-src/autonomous_driving_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.o
-.PHONY : src/autonomous_driving_node.cpp.o
-
-src/autonomous_driving_node.i: src/autonomous_driving_node.cpp.i
-.PHONY : src/autonomous_driving_node.i
-
-# target to preprocess a source file
-src/autonomous_driving_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.i
-.PHONY : src/autonomous_driving_node.cpp.i
-
-src/autonomous_driving_node.s: src/autonomous_driving_node.cpp.s
-.PHONY : src/autonomous_driving_node.s
-
-# target to generate assembly for a file
-src/autonomous_driving_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.s
-.PHONY : src/autonomous_driving_node.cpp.s
-
-src/lane_processor.o: src/lane_processor.cpp.o
-.PHONY : src/lane_processor.o
+src/lane_processor_node.o: src/lane_processor_node.cpp.o
+.PHONY : src/lane_processor_node.o
 
 # target to build an object file
-src/lane_processor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o
-.PHONY : src/lane_processor.cpp.o
+src/lane_processor_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lane_processor_node.dir/build.make CMakeFiles/lane_processor_node.dir/src/lane_processor_node.cpp.o
+.PHONY : src/lane_processor_node.cpp.o
 
-src/lane_processor.i: src/lane_processor.cpp.i
-.PHONY : src/lane_processor.i
+src/lane_processor_node.i: src/lane_processor_node.cpp.i
+.PHONY : src/lane_processor_node.i
 
 # target to preprocess a source file
-src/lane_processor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.i
-.PHONY : src/lane_processor.cpp.i
+src/lane_processor_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lane_processor_node.dir/build.make CMakeFiles/lane_processor_node.dir/src/lane_processor_node.cpp.i
+.PHONY : src/lane_processor_node.cpp.i
 
-src/lane_processor.s: src/lane_processor.cpp.s
-.PHONY : src/lane_processor.s
+src/lane_processor_node.s: src/lane_processor_node.cpp.s
+.PHONY : src/lane_processor_node.s
 
 # target to generate assembly for a file
-src/lane_processor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/autonomous_driving.dir/build.make CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.s
-.PHONY : src/lane_processor.cpp.s
+src/lane_processor_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lane_processor_node.dir/build.make CMakeFiles/lane_processor_node.dir/src/lane_processor_node.cpp.s
+.PHONY : src/lane_processor_node.cpp.s
 
 # Help Target
 help:
@@ -273,13 +249,10 @@ help:
 	@echo "... test"
 	@echo "... autonomous_driving_uninstall"
 	@echo "... uninstall"
-	@echo "... autonomous_driving"
-	@echo "... src/autonomous_driving_node.o"
-	@echo "... src/autonomous_driving_node.i"
-	@echo "... src/autonomous_driving_node.s"
-	@echo "... src/lane_processor.o"
-	@echo "... src/lane_processor.i"
-	@echo "... src/lane_processor.s"
+	@echo "... lane_processor_node"
+	@echo "... src/lane_processor_node.o"
+	@echo "... src/lane_processor_node.i"
+	@echo "... src/lane_processor_node.s"
 .PHONY : help
 
 

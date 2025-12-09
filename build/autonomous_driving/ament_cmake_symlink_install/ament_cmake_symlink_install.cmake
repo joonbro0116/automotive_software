@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "autonomous_driving" "DESTINATION" "lib/autonomous_driving")
+# install("TARGETS" "lane_processor_node" "DESTINATION" "lib/autonomous_driving")
 include("/home/joon/mission_hard/mission_hard/build/autonomous_driving/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/autonomous_driving")

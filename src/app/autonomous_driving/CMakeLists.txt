@@ -35,18 +35,13 @@ include_directories(
     ${EIGEN3_INCLUDE_DIRS}
 )
 
-## Declare a C++ executable
-add_executable(${PROJECT_NAME}
-    src/autonomous_driving_node.cpp
-    src/lane_processor.cpp
+## Declare lane_processor_node executable (standalone, single file)
+add_executable(lane_processor_node
+    src/lane_processor_node.cpp
 )
 
-## Link libraries to the executable
-target_link_libraries(${PROJECT_NAME}
-)
-
-## Add dependencies to the executable
-ament_target_dependencies(${PROJECT_NAME}
+## Add dependencies to lane_processor_node
+ament_target_dependencies(lane_processor_node
     rclcpp
     std_msgs
     ad_msgs
@@ -56,8 +51,8 @@ ament_target_dependencies(${PROJECT_NAME}
     visualization_msgs
 )
 
-## Install the executable
-install(TARGETS ${PROJECT_NAME}
+## Install the executables
+install(TARGETS lane_processor_node
     DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch

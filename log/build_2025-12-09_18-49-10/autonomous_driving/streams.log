@@ -1,0 +1,52 @@
+[3.544s] Invoking command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/mission_hard/mission_hard/src/app/autonomous_driving -DCMAKE_INSTALL_PREFIX=/home/joon/mission_hard/mission_hard/install/autonomous_driving
+[3.561s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.736s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.744s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[6.111s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.117s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.125s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.141s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.159s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.212s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.214s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[14.877s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[14.946s] -- Found ad_msgs: 0.0.0 (/home/joon/mission_hard/mission_hard/install/ad_msgs/share/ad_msgs/cmake)
+[15.054s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[15.063s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[15.283s] -- Configuring done
+[15.310s] -- Generating done
+[15.318s] -- Build files have been written to: /home/joon/mission_hard/mission_hard/build/autonomous_driving
+[15.336s] Invoked command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joon/mission_hard/mission_hard/src/app/autonomous_driving -DCMAKE_INSTALL_PREFIX=/home/joon/mission_hard/mission_hard/install/autonomous_driving
+[15.338s] Invoking command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/autonomous_driving -- -j16 -l16
+[15.399s] Consolidate compiler generated dependencies of target lane_processor_node
+[15.419s] [ 50%] Building CXX object CMakeFiles/lane_processor_node.dir/src/lane_processor.cpp.o
+[46.925s] [100%] Linking CXX executable lane_processor_node
+[50.973s] [100%] Built target lane_processor_node
+[50.988s] Invoked command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/autonomous_driving -- -j16 -l16
+[51.011s] Invoking command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/autonomous_driving
+[51.020s] -- Install configuration: ""
+[51.020s] -- Execute custom install script
+[51.020s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/lib/autonomous_driving/lane_processor_node
+[51.021s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml
+[51.022s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier
+[51.022s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/autonomous_driving.launch.xml:Zone.Identifier:Zone.Identifier
+[51.022s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml
+[51.022s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier
+[51.022s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/launch/manual_driving.launch.xml:Zone.Identifier:Zone.Identifier
+[51.023s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/lib/autonomous_driving/simultaneous_inputs.py
+[51.023s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/package_run_dependencies/autonomous_driving
+[51.023s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/parent_prefix_path/autonomous_driving
+[51.023s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.sh
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/ament_prefix_path.dsv
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/path.sh
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/environment/path.dsv
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.bash
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.sh
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.zsh
+[51.024s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/local_setup.dsv
+[51.024s] -- Symlinking: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/package.dsv
+[51.037s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/ament_index/resource_index/packages/autonomous_driving
+[51.037s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig.cmake
+[51.037s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/cmake/autonomous_drivingConfig-version.cmake
+[51.037s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/autonomous_driving/share/autonomous_driving/package.xml
+[51.039s] Invoked command in '/home/joon/mission_hard/mission_hard/build/autonomous_driving' returned '0': AMENT_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joon/mission_hard/mission_hard/install/ad_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/autonomous_driving

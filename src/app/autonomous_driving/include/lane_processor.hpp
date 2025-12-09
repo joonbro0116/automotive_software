@@ -69,6 +69,12 @@ public:
     const std::vector<interface::Point2D>& GetLane3Points() const;
     const std::vector<interface::Point2D>& GetLane4Points() const;
 
+    // Global frame points getters
+    const std::vector<interface::Point2D>& GetLane1PointsGlobal() const;
+    const std::vector<interface::Point2D>& GetLane2PointsGlobal() const;
+    const std::vector<interface::Point2D>& GetLane3PointsGlobal() const;
+    const std::vector<interface::Point2D>& GetLane4PointsGlobal() const;
+
     const interface::PolyfitLane& GetLane1Polyfit() const;
     const interface::PolyfitLane& GetLane2Polyfit() const;
     const interface::PolyfitLane& GetLane3Polyfit() const;

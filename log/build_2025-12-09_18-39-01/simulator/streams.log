@@ -1,0 +1,29 @@
+[0.266s] Invoking command in '/home/joon/mission_hard/mission_hard/build/simulator': CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/mission_hard/mission_hard/install/simulator:/home/joon/mission_hard/mission_hard/install/mission_manager:/home/joon/mission_hard/mission_hard/install/evaluation:/home/joon/mission_hard/mission_hard/install/autonomous_driving:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/simulator -- -j16 -l16
+[0.351s] [ 28%] Built target display
+[0.352s] [ 57%] Built target vehicle
+[0.354s] [100%] Built target lane_detection
+[0.369s] Invoked command in '/home/joon/mission_hard/mission_hard/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/mission_hard/mission_hard/install/simulator:/home/joon/mission_hard/mission_hard/install/mission_manager:/home/joon/mission_hard/mission_hard/install/evaluation:/home/joon/mission_hard/mission_hard/install/autonomous_driving:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble /usr/bin/cmake --build /home/joon/mission_hard/mission_hard/build/simulator -- -j16 -l16
+[0.372s] Invoking command in '/home/joon/mission_hard/mission_hard/build/simulator': CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/mission_hard/mission_hard/install/simulator:/home/joon/mission_hard/mission_hard/install/mission_manager:/home/joon/mission_hard/mission_hard/install/evaluation:/home/joon/mission_hard/mission_hard/install/autonomous_driving:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/simulator
+[0.379s] -- Install configuration: ""
+[0.379s] -- Execute custom install script
+[0.380s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/vehicle
+[0.380s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/lane_detection
+[0.380s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/lib/simulator/display
+[0.381s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml
+[0.381s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/launch/simulation.launch.xml:Zone.Identifier
+[0.381s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/package_run_dependencies/simulator
+[0.381s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/parent_prefix_path/simulator
+[0.381s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.sh
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/ament_prefix_path.dsv
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.sh
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/environment/path.dsv
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.bash
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.sh
+[0.382s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.zsh
+[0.383s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/local_setup.dsv
+[0.383s] -- Symlinking: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.dsv
+[0.392s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/ament_index/resource_index/packages/simulator
+[0.392s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig.cmake
+[0.393s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/cmake/simulatorConfig-version.cmake
+[0.394s] -- Up-to-date symlink: /home/joon/mission_hard/mission_hard/install/simulator/share/simulator/package.xml
+[0.423s] Invoked command in '/home/joon/mission_hard/mission_hard/build/simulator' returned '0': CMAKE_PREFIX_PATH=/home/joon/mission_hard/mission_hard/install/ad_msgs:/home/joon/mission_hard/mission_hard/install/simulator:/home/joon/mission_hard/mission_hard/install/mission_manager:/home/joon/mission_hard/mission_hard/install/evaluation:/home/joon/mission_hard/mission_hard/install/autonomous_driving:/home/joon/automotive_software_final/install/simulator:/home/joon/automotive_software_final/install/mission_manager:/home/joon/automotive_software_final/install/evaluation:/home/joon/automotive_software_final/install/autonomous_driving:/home/joon/automotive_software_final/install/ad_msgs:/opt/ros/humble /usr/bin/cmake --install /home/joon/mission_hard/mission_hard/build/simulator
