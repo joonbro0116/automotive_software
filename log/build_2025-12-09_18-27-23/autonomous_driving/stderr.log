@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/autonomous_driving.dir/src/lane_processor.cpp.o: in function `main':
-lane_processor.cpp:(.text+0x69): multiple definition of `main'; CMakeFiles/autonomous_driving.dir/src/autonomous_driving_node.cpp.o:autonomous_driving_node.cpp:(.text+0x74d4): first defined here
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/autonomous_driving.dir/build.make:245: autonomous_driving] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/autonomous_driving.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

@@ -1,1 +1,0 @@
-/home/joon/mission_hard/mission_hard/build/ad_msgs/rosidl_typesupport_fastrtps_c/ad_msgs/msg/detail/lane_point_data__rosidl_typesupport_fastrtps_c.h

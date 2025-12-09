@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/joon/mission_hard/mission_hard/build/autonomous_driving/lane_processor_node" "TARGETS" "lane_processor_node" "DESTINATION" "lib/autonomous_driving")

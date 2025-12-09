@@ -1,1 +1,0 @@
-/home/joon/mission_hard/mission_hard/build/ad_msgs/rosidl_generator_py/ad_msgs/__init__.py

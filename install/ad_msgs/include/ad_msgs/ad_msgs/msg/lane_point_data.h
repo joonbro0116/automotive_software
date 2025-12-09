@@ -1,1 +1,0 @@
-/home/joon/mission_hard/mission_hard/build/ad_msgs/rosidl_generator_c/ad_msgs/msg/lane_point_data.h

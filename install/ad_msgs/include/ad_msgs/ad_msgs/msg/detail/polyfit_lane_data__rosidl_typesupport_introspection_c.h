@@ -1,1 +1,0 @@
-/home/joon/mission_hard/mission_hard/build/ad_msgs/rosidl_typesupport_introspection_c/ad_msgs/msg/detail/polyfit_lane_data__rosidl_typesupport_introspection_c.h
